@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Github, Download, Send, CheckCircle, AlertCircle, Loader } from "lucide-react";
+import { Mail, MapPin, Github, Send, CheckCircle, AlertCircle, Loader } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import { BsWhatsapp } from "react-icons/bs";
 
