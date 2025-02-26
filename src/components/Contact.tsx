@@ -172,7 +172,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                 </a>
                 
                 <a
-                  href="https://linkedin.com/in/yourprofile" // Atualize com seu perfil do LinkedIn
+                  href="https://linkedin.com/in/aericki" // Atualize com seu perfil do LinkedIn
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-3 rounded-full ${

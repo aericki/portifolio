@@ -121,7 +121,8 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <a
-                  href="/Aericki_Trindade_CV.pdf"
+                  href="https://docs.google.com/document/d/1JL35R5Zy3-iTUBGkvkGPMKPhthSUZ0zDrgPACsMPMVw/edit?usp=sharing"
+                  target="_blank"
                   download
                   className={`${isDarkMode ? "bg-red-600 hover:bg-red-700 text-white" : "bg-gray-700 hover:bg-gray-800 text-white"} px-6 py-3 rounded-full font-medium transition inline-flex items-center`}
                 >
@@ -153,7 +154,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
               </motion.a>
               
               <motion.a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://linkedin.com/in/aericki"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5 }}
