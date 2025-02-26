@@ -28,7 +28,7 @@ const certifications = [
 
 const Certifications: React.FC<CertificationsProps> = ({ isDarkMode }) => {
   return (
-    <section id="certificacoes" className={`py-20 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
+    <section id="certificacoes" className={`py-5 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

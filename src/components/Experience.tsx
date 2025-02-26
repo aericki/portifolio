@@ -10,28 +10,28 @@ const experiences = [
     title: "Desenvolvedor Web",
     company: "Projetos Pessoais",
     period: "2023 - Presente",
-    description: "Desenvolvi aplicações web e APIs usando Node.js, Express, TypeScript e React. Criei o Breaking Locations (Beta), uma plataforma web para encontrar locais de treino de breaking.",
-    technologies: ["JavaScript", "React", "Next.js", "Node.js", "Express", "Tailwind CSS"],
+    description: "Desenvolvendo aplicações web e APIs usando Node.js, Express, TypeScript e React. Criei o Breaking Locations (Beta), uma plataforma web para encontrar locais de treino de breaking.",
+    technologies: ["Node.js,", "Express", "TypeScript", "JavaScript", "React", "Node.js", "Express", "Tailwind CSS"],
   },
   {
     title: "Técnico de Manutenção de Computadores",
     company: "Peruíbe, SP",
     period: "Experiência Anterior",
     description: "Realizei formatação, reparo e montagem de computadores, oferecendo suporte técnico e desenvolvendo habilidades de resolução de problemas.",
-    technologies: ["Suporte Técnico", "Hardware", "Resolução de Problemas"],
+    technologies: ["Suporte Técnico", "Hardware", "Resolução de Problemas", "Manutenção de Computadores" ],
   },
   {
     title: "Graduação em Análise e Desenvolvimento de Sistemas",
     company: "UNISA",
     period: "Conclusão Prevista: Dezembro 2025",
     description: "Atualmente cursando graduação em Análise e Desenvolvimento de Sistemas, focando em tecnologias web modernas e práticas de desenvolvimento de software.",
-    technologies: [],
+    technologies: ["Estrutura dados", "Boas Práticas", "Banco de Dados"],
   },
 ];
 
 const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
   return (
-    <section id="experiencia" className={`py-20 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
+    <section id="experiencia" className={`py-10 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
                           {exp.technologies.map((tech) => (
                             <span
                               key={tech}
-                              className={`${isDarkMode ? "bg-red-600/10 text-red-600" : "bg-gray-600/10 text-gray-600"} text-sm px-2 py-1 rounded`}
+                              className={`${isDarkMode ? "bg-red-600/45 text-white" : "bg-gray-600/10 text-gray-600"} text-sm px-2 py-1 rounded`}
                             >
                               {tech}
                             </span>

@@ -11,7 +11,7 @@ const skills = [
   { name: "React", icon: SiReact, color: "text-cyan-400" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
   { name: "Express", icon: SiExpress, color: "text-gray-500" },
-  { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+  { name: "Next.js", icon: SiNextdotjs, color: "text-gray-300" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
   { name: "Prisma", icon: SiPrisma, color: "text-indigo-400" },
   { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
@@ -22,7 +22,7 @@ const skills = [
 
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   return (
-    <section id="habilidades" className={`py-16 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
+    <section id="habilidades" className={`py-8 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
       <div className="max-w-6xl mx-auto px-4">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
