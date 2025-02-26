@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Code, Heart, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Code, Heart } from "lucide-react";
 import { SiTypescript, SiReact, SiTailwindcss, SiFramer } from "react-icons/si";
 
 interface FooterProps {
@@ -149,7 +149,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                 </div>
                 <span>Peruíbe - SP, Brasil</span>
               </li>
-              <li className="flex items-center gap-3 mt-4">
+              {/*<li className="flex items-center gap-3 mt-4">
                 <a 
                   href="/Aericki_Trindade_CV.pdf" 
                   download 
@@ -162,7 +162,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   <ExternalLink size={14} />
                   Baixar Currículo
                 </a>
-              </li>
+              </li>*/}
             </ul>
           </div>
         </div>
