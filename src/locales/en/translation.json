@@ -13,32 +13,32 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I am a recent graduate in Systems Analysis and Development from UNISA, with a solid passion for transforming ideas into efficient and intuitive web solutions. My expertise covers frontend and backend development, using modern technologies such as JavaScript, TypeScript, Node.js, and React. I am looking for an opportunity to apply my knowledge and contribute to innovative projects, always focused on optimization and good development practices."
+    "description": "Developer focused on creating efficient and intuitive web solutions. With experience in frontend and backend, I use technologies like JavaScript, TypeScript, Node.js, and React to turn ideas into quality products. I am always looking for new challenges and opportunities to apply and expand my knowledge, with a focus on optimization and best development practices."
   },
   "experience": {
     "title": "Experience",
     "web_developer_title": "Web Developer",
     "web_developer_company": "Personal Projects",
     "web_developer_period": "2023 - Present",
-    "web_developer_description": "Developing web applications and APIs using Node.js, Express, TypeScript, and React. I created Breaking Locations (Beta), a web platform for finding breaking training spots.",
+    "web_developer_description": "Development of full-stack web applications, from designing the RESTful API with Node.js and Express to implementing reactive user interfaces with React and TypeScript. Main project: Breaking Locations (Beta), a platform for the breaking community to find training spots.",
     "computer_technician_title": "Computer Maintenance Technician",
     "computer_technician_company": "Peruíbe, SP",
     "computer_technician_period": "Previous Experience",
-    "computer_technician_description": "Performed formatting, repair, and assembly of computers, offering technical support and developing problem-solving skills.",
+    "computer_technician_description": "Diagnosis, repair, and assembly of computers, as well as technical support for users. This experience enhanced my problem-solving and customer service skills.",
     "systems_analysis_degree_title": "Degree in Systems Analysis and Development",
     "systems_analysis_degree_company": "UNISA",
     "systems_analysis_degree_period": "Completed: December 2025",
-    "systems_analysis_degree_description": "I completed my degree in Systems Analysis and Development, focusing on agile methodologies, software architecture, and the development of robust solutions, applying the best market practices."
+    "systems_analysis_degree_description": "Degree focused on the entire software development lifecycle, including agile methodologies, software architecture, and database design. I learned to develop robust and scalable solutions, applying the best market practices."
   },
   "skills": {
     "title": "Technical Skills",
-    "description": "My technical skills are the foundation for building robust and efficient solutions. With a solid background in Systems Analysis and Development, I apply these tools to design, develop, and optimize systems that meet business needs."
+    "description": "These are the technologies I use to build my applications. I have a versatile profile, with knowledge in both frontend and backend, which allows me to have a complete view of a project's development."
   },
   "projects": {
     "title": "Projects",
-    "description": "Here are some of my recent projects, where I apply the principles of Systems Analysis and Development to create functional and efficient solutions. Each project reflects my ability to transform requirements into robust and scalable systems.",
+    "description": "Below are some projects that demonstrate my skills in action. Each one represents a different challenge, from the conception of the idea to the final implementation, using the most appropriate technologies for each case.",
     "breaking_locations_title": "Breaking Locations",
-    "breaking_locations_description": "A web platform for finding breaking training spots.",
+    "breaking_locations_description": "A web platform that connects breaking dancers to training spots. The project includes an interactive map, location registration, and a rating system. Developed with the goal of strengthening the local breaking community.",
     "preview": "Project Preview",
     "view_site": "View Site",
     "technologies_used": "Technologies used:",

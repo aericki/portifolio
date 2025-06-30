@@ -13,32 +13,32 @@
   },
   "about": {
     "title": "Sobre Mí",
-    "description": "Soy un profesional recién graduado en Análisis y Desarrollo de Sistemas por la UNISA, con una sólida pasión por transformar ideas en soluciones web eficientes e intuitivas. Mi experiencia abarca el desarrollo frontend y backend, utilizando tecnologías modernas como JavaScript, TypeScript, Node.js y React. Busco una oportunidad para aplicar mis conocimientos y contribuir a proyectos innovadores, siempre enfocado en la optimización y buenas prácticas de desarrollo."
+    "description": "Desarrollador enfocado en la creación de soluciones web eficientes e intuitivas. Con experiencia en frontend y backend, utilizo tecnologías como JavaScript, TypeScript, Node.js y React para transformar ideas en productos de calidad. Siempre estoy en busca de nuevos desafíos y oportunidades para aplicar y expandir mis conocimientos, con un enfoque en la optimización y las buenas prácticas de desarrollo."
   },
   "experience": {
     "title": "Experiencia",
     "web_developer_title": "Desarrollador Web",
     "web_developer_company": "Proyectos Personales",
     "web_developer_period": "2023 - Presente",
-    "web_developer_description": "Desarrollando aplicaciones web y APIs usando Node.js, Express, TypeScript y React. Creé Breaking Locations (Beta), una plataforma web para encontrar lugares de entrenamiento de breaking.",
+    "web_developer_description": "Desarrollo de aplicaciones web full-stack, desde el diseño de la API RESTful con Node.js y Express hasta la implementación de interfaces de usuario reactivas con React y TypeScript. Proyecto principal: Breaking Locations (Beta), una plataforma para que la comunidad de breaking encuentre lugares de entrenamiento.",
     "computer_technician_title": "Técnico de Mantenimiento de Computadoras",
     "computer_technician_company": "Peruíbe, SP",
     "computer_technician_period": "Experiencia Previa",
-    "computer_technician_description": "Realicé formateo, reparación y montaje de computadoras, ofreciendo soporte técnico y desarrollando habilidades de resolución de problemas.",
+    "computer_technician_description": "Diagnóstico, reparación y montaje de computadoras, así como soporte técnico a usuarios. Esta experiencia mejoró mis habilidades de resolución de problemas y servicio al cliente.",
     "systems_analysis_degree_title": "Grado en Análisis y Desarrollo de Sistemas",
     "systems_analysis_degree_company": "UNISA",
     "systems_analysis_degree_period": "Completado: Diciembre 2025",
-    "systems_analysis_degree_description": "Completé mi grado en Análisis y Desarrollo de Sistemas, centrándome en metodologías ágiles, arquitectura de software y el desarrollo de soluciones robustas, aplicando las mejores prácticas del mercado."
+    "systems_analysis_degree_description": "Grado enfocado en todo el ciclo de vida del desarrollo de software, incluyendo metodologías ágiles, arquitectura de software y diseño de bases de datos. Aprendí a desarrollar soluciones robustas y escalables, aplicando las mejores prácticas del mercado."
   },
   "skills": {
     "title": "Habilidades Técnicas",
-    "description": "Mis habilidades técnicas son la base para la construcción de soluciones robustas y eficientes. Con una sólida formación en Análisis y Desarrollo de Sistemas, aplico estas herramientas para diseñar, desarrollar y optimizar sistemas que satisfagan las necesidades del negocio."
+    "description": "Estas son las tecnologías que utilizo para construir mis aplicaciones. Tengo un perfil versátil, con conocimientos tanto en frontend como en backend, lo que me permite tener una visión completa del desarrollo de un proyecto."
   },
   "projects": {
     "title": "Proyectos",
-    "description": "Aquí están algunos de mis proyectos recientes, donde aplico los principios de Análisis y Desarrollo de Sistemas para crear soluciones funcionales y eficientes. Cada proyecto refleja mi capacidad para transformar requisitos en sistemas robustos y escalables.",
+    "description": "A continuación, algunos proyectos que demuestran mis habilidades en acción. Cada uno representa un desafío diferente, desde la concepción de la idea hasta la implementación final, utilizando las tecnologías más adecuadas para cada caso.",
     "breaking_locations_title": "Breaking Locations",
-    "breaking_locations_description": "Una plataforma web para encontrar lugares de entrenamiento de breaking.",
+    "breaking_locations_description": "Plataforma web que conecta a los bailarines de breaking con lugares de entrenamiento. El proyecto incluye un mapa interactivo, registro de lugares y un sistema de calificación. Desarrollado con el objetivo de fortalecer la comunidad local de breaking.",
     "preview": "Vista previa del proyecto",
     "view_site": "Ver Sitio",
     "technologies_used": "Tecnologías utilizadas:",

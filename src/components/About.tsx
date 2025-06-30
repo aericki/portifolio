@@ -24,7 +24,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className={`text-base sm:text-lg text-center ${isDarkMode ? "text-gray-300" : "text-gray-600"} px-20 text-justify text-wrap `}
+        className={`text-base sm:text-lg ${isDarkMode ? "text-gray-300" : "text-gray-600"} max-w-3xl mx-auto text-left`}
       >
         {t("about.description")}
       </motion.p>

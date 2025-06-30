@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Code, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Code} from "lucide-react";
 import { SiTypescript, SiReact, SiTailwindcss, SiFramer } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
