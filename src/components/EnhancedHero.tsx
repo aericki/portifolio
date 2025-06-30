@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { Download, ExternalLink, Github, Mail, ChevronDown } from "lucide-react";
 import { TypeAnimation } from 'react-type-animation';
+import { useTranslation } from "react-i18next";
 
 interface EnhancedHeroProps {
   isDarkMode: boolean;
 }
 
 const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
+  const { t } = useTranslation();
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-16 overflow-hidden">
       {/* Animated background */}
@@ -91,26 +93,26 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
             transition={{ duration: 0.5 }}
           >
             <h1 className={`text-4xl sm:text-6xl font-bold tracking-tight mb-6 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
-              Olá, me chamo{" "}
+              {t("hero.greeting")}{" "}
               <motion.span
                 className={`bg-gradient-to-r ${isDarkMode ? "from-red-600 to-red-400" : "from-gray-700 to-gray-500"} bg-clip-text text-transparent`}
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                Aéricki
+                {t("hero.name")}
               </motion.span>
             </h1>
             
             <div className={`h-12 overflow-hidden mb-8 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
               <TypeAnimation
                 sequence={[
-                  'Desenvolvedor Web',
+                  t('hero.role_web_developer'),
                   2000,
-                  'Analista de Sistemas',
+                  t('hero.role_systems_analyst'),
                   2000,
-                  'Back-end',
+                  t('hero.role_backend'),
                   3000,
-                  'Front-end',
+                  t('hero.role_frontend'),
                   2000,
                 ]}
                 wrapper="p"
@@ -129,7 +131,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                   className={`${isDarkMode ? "bg-red-600 hover:bg-red-700 text-white" : "bg-gray-700 hover:bg-gray-800 text-white"} px-6 py-3 rounded-full font-medium transition inline-flex items-center`}
                 >
                   <Download className="mr-2 h-4 w-4" />
-                  Baixar Currículo
+                  {t("hero.download_cv")}
                 </a>
               </motion.div>
               
@@ -139,7 +141,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                   className={`${isDarkMode ? "border border-red-600 text-red-600 hover:bg-red-600 hover:text-white" : "border border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white"} px-6 py-3 rounded-full font-medium transition inline-flex items-center`}
                 >
                   <Mail className="mr-2 h-4 w-4" />
-                  Entrar em Contato
+                  {t("hero.contact_me")}
                 </a>
               </motion.div>
             </div>

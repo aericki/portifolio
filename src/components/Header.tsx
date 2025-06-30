@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { FaUser, FaCode, FaRocket, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { ChevronDown } from "lucide-react";
 
 // Componente ThemeToggle
 interface ThemeToggleProps {
@@ -8,19 +10,20 @@ interface ThemeToggleProps {
   toggleTheme: () => void;
 }
 
+import ThemeToggle from "./ui/ThemeToggle"; // Import ThemeToggle directly
+
 interface HeaderProps {
   activeSection: string;
   isDarkMode: boolean;
-  toggleTheme: () => void;
-  ThemeToggle: React.FC<ThemeToggleProps>;
+  toggleDarkMode: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ 
-  activeSection, 
-  isDarkMode, 
-  toggleTheme, 
-  ThemeToggle
+const Header: React.FC<HeaderProps> = ({
+  activeSection,
+  isDarkMode,
+  toggleDarkMode
 }) => {
+  const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [cursorVisible, setCursorVisible] = useState(true);
@@ -45,13 +48,17 @@ const Header: React.FC<HeaderProps> = ({
   }, []);
 
   const navItems = [
-    { id: "sobre", label: "Sobre", icon: <FaUser /> },
-    { id: "experiencia", label: "Experiência", icon: <FaCode /> },
-    { id: "habilidades", label: "Habilidades", icon: <FaRocket /> },
-    { id: "projetos", label: "Projetos", icon: <FaRocket /> },
-    { id: "certificacoes", label: "Certificações", icon: <FaCode /> },
-    { id: "contato", label: "Contato", icon: <FaEnvelope /> },
+    { id: "sobre", label: t("header.about"), icon: <FaUser /> },
+    { id: "experiencia", label: t("header.experience"), icon: <FaCode /> },
+    { id: "habilidades", label: t("header.skills"), icon: <FaRocket /> },
+    { id: "projetos", label: t("header.projects"), icon: <FaRocket /> },
+    { id: "certificacoes", label: t("header.certifications"), icon: <FaCode /> },
+    { id: "contato", label: t("header.contact"), icon: <FaEnvelope /> },
   ];
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <header 
@@ -122,7 +129,44 @@ const Header: React.FC<HeaderProps> = ({
         </nav>
         
         <div className="flex items-center ">
-          <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+          {/* Language Selector */}
+          <div className="relative group">
+            <button
+              className={`px-3 py-2 rounded-md font-medium flex items-center gap-1 ${
+                isDarkMode ? "text-gray-300 hover:text-red-600" : "text-gray-700 hover:text-gray-900"
+              } transition-colors`}
+            >
+              {i18n.language.toUpperCase()}
+              <ChevronDown size={16} />
+            </button>
+            <div className={`absolute right-0 mt-2 w-28 rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100 ${
+              isDarkMode ? "bg-gray-800" : "bg-white"
+            }`}>
+              <a
+                href="#"
+                onClick={() => changeLanguage("pt")}
+                className={`block px-4 py-2 text-sm ${isDarkMode ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-gray-100"} rounded-md`}
+              >
+                Português
+              </a>
+              <a
+                href="#"
+                onClick={() => changeLanguage("en")}
+                className={`block px-4 py-2 text-sm ${isDarkMode ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-gray-100"} rounded-md`}
+              >
+                English
+              </a>
+              <a
+                href="#"
+                onClick={() => changeLanguage("es")}
+                className={`block px-4 py-2 text-sm ${isDarkMode ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-gray-100"} rounded-md`}
+              >
+                Español
+              </a>
+            </div>
+          </div>
+
+          <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleDarkMode} />
           
           <motion.button
             initial={{ opacity: 0 }}
@@ -134,7 +178,7 @@ const Header: React.FC<HeaderProps> = ({
                 : "bg-gray-200 hover:bg-gray-300"
             } transition-colors`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-label={isMobileMenuOpen ? t("header.close_menu") : t("header.open_menu")}
           >
             {isMobileMenuOpen ? (
               <FaTimes className={isDarkMode ? "text-red-500" : "text-gray-800"} size={18} />

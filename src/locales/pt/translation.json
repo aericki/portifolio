@@ -1,0 +1,87 @@
+{
+  "page_title": "Aericki Ferreira - Analista e Desenvolvedor de Sistemas | Portfólio",
+  "hero": {
+    "greeting": "Olá, me chamo",
+    "name": "Aericki",
+    "role_web_developer": "Desenvolvedor Web",
+    "role_systems_analyst": "Analista de Sistemas",
+    "role_backend": "Back-end",
+    "role_frontend": "Front-end",
+    "download_cv": "Baixar Currículo",
+    "contact_me": "Entrar em Contato",
+    "view_more_projects": "Ver mais projetos no GitHub"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Sou um profissional recém-formado em Análise e Desenvolvimento de Sistemas pela UNISA, com uma paixão sólida por transformar ideias em soluções web eficientes e intuitivas. Minha expertise abrange o desenvolvimento frontend e backend, utilizando tecnologias modernas como JavaScript, TypeScript, Node.js e React. Busco uma oportunidade para aplicar meus conhecimentos e contribuir com projetos inovadores, sempre focado em otimização e boas práticas de desenvolvimento."
+  },
+  "experience": {
+    "title": "Experiência",
+    "web_developer_title": "Desenvolvedor Web",
+    "web_developer_company": "Projetos Pessoais",
+    "web_developer_period": "2023 - Presente",
+    "web_developer_description": "Desenvolvendo aplicações web e APIs usando Node.js, Express, TypeScript e React. Criei o Breaking Locations (Beta), uma plataforma web para encontrar locais de treino de breaking.",
+    "computer_technician_title": "Técnico de Manutenção de Computadores",
+    "computer_technician_company": "Peruíbe, SP",
+    "computer_technician_period": "Experiência Anterior",
+    "computer_technician_description": "Realizei formatação, reparo e montagem de computadores, oferecendo suporte técnico e desenvolvendo habilidades de resolução de problemas.",
+    "systems_analysis_degree_title": "Graduação em Análise e Desenvolvimento de Sistemas",
+    "systems_analysis_degree_company": "UNISA",
+    "systems_analysis_degree_period": "Concluído: Dezembro 2025",
+    "systems_analysis_degree_description": "Concluí a graduação em Análise e Desenvolvimento de Sistemas, com foco em metodologias ágeis, arquitetura de software e desenvolvimento de soluções robustas, aplicando as melhores práticas do mercado."
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "description": "Minhas habilidades técnicas são a base para a construção de soluções robustas e eficientes. Com uma sólida formação em Análise e Desenvolvimento de Sistemas, aplico essas ferramentas para projetar, desenvolver e otimizar sistemas que atendam às necessidades do negócio."
+  },
+  "projects": {
+    "title": "Projetos",
+    "description": "Aqui estão alguns dos meus projetos recentes, onde aplico os princípios de Análise e Desenvolvimento de Sistemas para criar soluções funcionais e eficientes. Cada projeto reflete minha capacidade de transformar requisitos em sistemas robustos e escaláveis."
+  },
+  "certifications": {
+    "title": "Certificações",
+    "nextjs_title": "Next.js do Básico ao Avançado",
+    "nextjs_provider": "Udemy",
+    "nextjs_year": "2024",
+    "nextjs_description": "Curso abrangente sobre Next.js, cobrindo fundamentos e técnicas avançadas de desenvolvimento web.",
+    "web_dev_title": "Desenvolvimento Web Completo: 20 Cursos e 20 Projetos",
+    "web_dev_provider": "Udemy",
+    "web_dev_year": "2023",
+    "web_dev_description": "Formação completa em desenvolvimento web, incluindo HTML, CSS, JavaScript, React e mais, com projetos práticos.",
+    "algorithms_title": "Algoritmos e Lógica de Programação",
+    "algorithms_provider": "Udemy",
+    "algorithms_year": "2023",
+    "algorithms_description": "Curso focado em lógica de programação e resolução de problemas com algoritmos."
+  },
+  "contact": {
+    "title": "Vamos Conversar",
+    "intro_message": "Tem uma pergunta ou proposta, ou apenas quer dizer olá? Vá em frente.",
+    "contact_info_title": "Informações de Contato",
+    "email": "Email",
+    "phone_whatsapp": "Telefone e Whatsapp",
+    "location": "Localização",
+    "send_message_title": "Envie uma Mensagem",
+    "name_label": "Nome",
+    "email_label": "Email",
+    "message_label": "Mensagem",
+    "send_button": "Enviar Mensagem",
+    "sending_button": "Enviando...",
+    "success_message": "Mensagem enviada com sucesso!",
+    "success_sub_message": "Obrigado pelo contato. Responderei em breve.",
+    "error_message": "Erro ao enviar mensagem.",
+    "error_sub_message": "Por favor, tente novamente ou use outro método de contato."
+  },
+  "footer": {
+    "copyright": "Todos os direitos reservados."
+  },
+  "header": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "certifications": "Certificações",
+    "contact": "Contato",
+    "close_menu": "Fechar menu",
+    "open_menu": "Abrir menu"
+  }
+}

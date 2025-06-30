@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Mail, MapPin, Github, Send, CheckCircle, AlertCircle, Loader } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import { BsWhatsapp } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 interface ContactProps {
   isDarkMode: boolean;
@@ -12,6 +13,7 @@ interface ContactProps {
 type FormStatus = "idle" | "sending" | "success" | "error";
 
 const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
+  const { t } = useTranslation();
   // Estado para controlar o status do envio
   const [formStatus, setFormStatus] = useState<FormStatus>("idle");
   
@@ -85,11 +87,11 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
         >
           <h2 className={`text-2xl sm:text-3xl font-bold mb-6 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}>
-            Vamos Conversar
+            {t("contact.title")}
           </h2>
           
           <p className={`text-center max-w-2xl mx-auto mb-12 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-            Tem uma pergunta ou proposta, ou apenas quer dizer olá? Vá em frente.
+            {t("contact.intro_message")}
           </p>
           
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -97,7 +99,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
             <div className="space-y-8">
               <div className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg p-8`}>
                 <h3 className={`text-xl font-semibold mb-6 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
-                  Informações de Contato
+                  {t("contact.contact_info_title")}
                 </h3>
                 
                 <div className="space-y-6">
@@ -106,7 +108,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                       <Mail className={`w-5 h-5 ${isDarkMode ? "text-red-600" : "text-gray-700"}`} />
                     </div>
                     <div>
-                      <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>Email</p>
+                      <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>{t("contact.email")}</p>
                       <a 
                         href="mailto:aerickidev@gmail.com" 
                         className={`font-medium ${isDarkMode ? "text-white hover:text-red-500" : "text-gray-800 hover:text-red-600"} transition-colors`}
@@ -121,7 +123,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                       <BsWhatsapp className={`w-5 h-5 ${isDarkMode ? "text-red-600" : "text-gray-700"}`} />
                     </div>
                     <div>
-                      <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>Telefone e Whatsapp</p>
+                      <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>{t("contact.phone_whatsapp")}</p>
                       <a 
                         href="https://wa.me/+5513991717187" 
                         className={`font-medium ${isDarkMode ? "text-white hover:text-red-500" : "text-gray-800 hover:text-red-600"} transition-colors`}
@@ -136,7 +138,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                       <MapPin className={`w-5 h-5 ${isDarkMode ? "text-red-600" : "text-gray-700"}`} />
                     </div>
                     <div>
-                      <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>Localização</p>
+                      <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>{t("contact.location")}</p>
                       <p className={`font-medium ${isDarkMode ? "text-white" : "text-gray-800"}`}>
                         Peruíbe, SP - Brasil
                       </p>
@@ -192,7 +194,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
             {/* Formulário de Contato */}
             <div className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg p-8`}>
               <h3 className={`text-xl font-semibold mb-6 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
-                Envie uma Mensagem
+                {t("contact.send_message_title")}
               </h3>
               
               {/* Mensagens de status */}
@@ -202,8 +204,8 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                 } flex items-start`}>
                   <CheckCircle className="w-5 h-5 mr-2 mt-0.5" />
                   <div>
-                    <p className="font-medium">Mensagem enviada com sucesso!</p>
-                    <p className="text-sm mt-1">Obrigado pelo contato. Responderei em breve.</p>
+                    <p className="font-medium">{t("contact.success_message")}</p>
+                    <p className="text-sm mt-1">{t("contact.success_sub_message")}</p>
                   </div>
                 </div>
               )}
@@ -214,8 +216,8 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                 } flex items-start`}>
                   <AlertCircle className="w-5 h-5 mr-2 mt-0.5" />
                   <div>
-                    <p className="font-medium">Erro ao enviar mensagem.</p>
-                    <p className="text-sm mt-1">Por favor, tente novamente ou use outro método de contato.</p>
+                    <p className="font-medium">{t("contact.error_message")}</p>
+                    <p className="text-sm mt-1">{t("contact.error_sub_message")}</p>
                   </div>
                 </div>
               )}
@@ -225,7 +227,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                   <label htmlFor="from_name" className={`block text-sm font-medium mb-1 ${
                     isDarkMode ? "text-gray-300" : "text-gray-700"
                   }`}>
-                    Nome
+                    {t("contact.name_label")}
                   </label>
                   <input
                     id="from_name"
@@ -241,7 +243,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                     } border focus:outline-none focus:ring-1 focus:ring-opacity-50 ${
                       isDarkMode ? "focus:ring-red-500" : "focus:ring-red-600"
                     } transition-colors`}
-                    placeholder="Seu nome"
+                    placeholder={t("contact.name_placeholder")}
                     disabled={formStatus === "sending"}
                   />
                 </div>
@@ -250,7 +252,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                   <label htmlFor="from_email" className={`block text-sm font-medium mb-1 ${
                     isDarkMode ? "text-gray-300" : "text-gray-700"
                   }`}>
-                    Email
+                    {t("contact.email_label")}
                   </label>
                   <input
                     id="from_email"
@@ -266,7 +268,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                     } border focus:outline-none focus:ring-1 focus:ring-opacity-50 ${
                       isDarkMode ? "focus:ring-red-500" : "focus:ring-red-600"
                     } transition-colors`}
-                    placeholder="seu.email@exemplo.com"
+                    placeholder={t("contact.email_placeholder")}
                     disabled={formStatus === "sending"}
                   />
                 </div>
@@ -282,7 +284,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                   <label htmlFor="message" className={`block text-sm font-medium mb-1 ${
                     isDarkMode ? "text-gray-300" : "text-gray-700"
                   }`}>
-                    Mensagem
+                    {t("contact.message_label")}
                   </label>
                   <textarea
                     id="message"
@@ -298,7 +300,7 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                     } border focus:outline-none focus:ring-1 focus:ring-opacity-50 ${
                       isDarkMode ? "focus:ring-red-500" : "focus:ring-red-600"
                     } transition-colors resize-none`}
-                    placeholder="Sua mensagem aqui..."
+                    placeholder={t("contact.message_placeholder")}
                     disabled={formStatus === "sending"}
                   />
                 </div>
@@ -315,12 +317,12 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                   {formStatus === "sending" ? (
                     <>
                       <Loader className="animate-spin mr-2 h-5 w-5" />
-                      Enviando...
+                      {t("contact.sending_button")}
                     </>
                   ) : (
                     <>
                       <Send className="mr-2 h-5 w-5" />
-                      Enviar Mensagem
+                      {t("contact.send_button")}
                     </>
                   )}
                 </button>

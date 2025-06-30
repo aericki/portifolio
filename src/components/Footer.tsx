@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MapPin, Code, Heart } from "lucide-react";
 import { SiTypescript, SiReact, SiTailwindcss, SiFramer } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 interface FooterProps {
   isDarkMode: boolean;
 }
 
 const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -16,11 +18,10 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
           {/* Sobre */}
           <div>
             <h3 className={`text-lg font-bold mb-4 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
-              Aéricki Ferreira
+              {t("footer.about_title")}
             </h3>
             <p className={`mb-4 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-              Desenvolvedor Web apaixonado por criar experiências digitais 
-              interativas e acessíveis com as tecnologias mais modernas do mercado.
+              {t("footer.about_description")}
             </p>
             <div className="flex space-x-3">
               <a 
@@ -66,7 +67,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
           {/* Links rápidos */}
           <div>
             <h3 className={`text-lg font-bold mb-4 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
-              Links Rápidos
+              {t("footer.quick_links_title")}
             </h3>
             <ul className={`space-y-2 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
               <li>
@@ -75,7 +76,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   className="hover:underline hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
-                  Sobre
+                  {t("header.about")}
                 </a>
               </li>
               <li>
@@ -84,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   className="hover:underline hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
-                  Experiência
+                  {t("header.experience")}
                 </a>
               </li>
               <li>
@@ -93,7 +94,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   className="hover:underline hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
-                  Habilidades
+                  {t("header.skills")}
                 </a>
               </li>
               <li>
@@ -102,7 +103,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   className="hover:underline hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
-                  Projetos
+                  {t("header.projects")}
                 </a>
               </li>
               <li>
@@ -111,7 +112,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   className="hover:underline hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
-                  Certificações
+                  {t("header.certifications")}
                 </a>
               </li>
               <li>
@@ -120,7 +121,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   className="hover:underline hover:text-red-600 transition-colors flex items-center gap-2"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-red-600"></span>
-                  Contato
+                  {t("header.contact")}
                 </a>
               </li>
             </ul>
@@ -129,7 +130,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
           {/* Contato */}
           <div>
             <h3 className={`text-lg font-bold mb-4 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
-              Contato
+              {t("footer.contact_title")}
             </h3>
             <ul className={`space-y-3 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
               <li className="flex items-start gap-3">
@@ -147,22 +148,8 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                 <div className="mt-0.5">
                   <MapPin size={16} />
                 </div>
-                <span>Peruíbe - SP, Brasil</span>
+                <span>{t("footer.location_text")}</span>
               </li>
-              {/*<li className="flex items-center gap-3 mt-4">
-                <a 
-                  href="/Aericki_Trindade_CV.pdf" 
-                  download 
-                  className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-sm ${
-                    isDarkMode
-                      ? "bg-red-600 text-white hover:bg-red-700"
-                      : "bg-gray-700 text-white hover:bg-gray-800"
-                  } transition-colors`}
-                >
-                  <ExternalLink size={14} />
-                  Baixar Currículo
-                </a>
-              </li>*/}
             </ul>
           </div>
         </div>
@@ -174,7 +161,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
           }`}>
             <div className="flex items-center gap-2">
               <Code size={16} />
-              <span className="text-sm">Desenvolvido com:</span>
+              <span className="text-sm">{t("footer.developed_with")}</span>
             </div>
             <div className="flex items-center gap-4">
               <motion.div 
@@ -215,10 +202,10 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
         {/* Copyright */}
         <div className="text-center">
           <p className={`text-sm ${isDarkMode ? "text-gray-600" : "text-gray-500"}`}>
-            © {currentYear} Aericki Trindade Araujo de Jesus Ferreira. Todos os direitos reservados.
+            © {currentYear} Aericki Trindade Araujo de Jesus Ferreira. {t("footer.copyright")}
           </p>
           <p className={`text-xs mt-2 flex justify-center items-center gap-1 ${isDarkMode ? "text-gray-700" : "text-gray-400"}`}>
-            Feito com <Heart className="h-3 w-3 text-red-500" /> e muitas xícaras de café
+            {t("footer.made_with_love")}
           </p>
         </div>
       </div>

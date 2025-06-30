@@ -1,0 +1,87 @@
+{
+  "page_title": "Aericki Ferreira - Systems Analyst and Developer | Portfolio",
+  "hero": {
+    "greeting": "Hello, my name is",
+    "name": "Aericki",
+    "role_web_developer": "Web Developer",
+    "role_systems_analyst": "Systems Analyst",
+    "role_backend": "Back-end",
+    "role_frontend": "Front-end",
+    "download_cv": "Download CV",
+    "contact_me": "Contact Me",
+    "view_more_projects": "View more projects on GitHub"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a recent graduate in Systems Analysis and Development from UNISA, with a solid passion for transforming ideas into efficient and intuitive web solutions. My expertise covers frontend and backend development, using modern technologies such as JavaScript, TypeScript, Node.js, and React. I am looking for an opportunity to apply my knowledge and contribute to innovative projects, always focused on optimization and good development practices."
+  },
+  "experience": {
+    "title": "Experience",
+    "web_developer_title": "Web Developer",
+    "web_developer_company": "Personal Projects",
+    "web_developer_period": "2023 - Present",
+    "web_developer_description": "Developing web applications and APIs using Node.js, Express, TypeScript, and React. I created Breaking Locations (Beta), a web platform for finding breaking training spots.",
+    "computer_technician_title": "Computer Maintenance Technician",
+    "computer_technician_company": "Peruíbe, SP",
+    "computer_technician_period": "Previous Experience",
+    "computer_technician_description": "Performed formatting, repair, and assembly of computers, offering technical support and developing problem-solving skills.",
+    "systems_analysis_degree_title": "Degree in Systems Analysis and Development",
+    "systems_analysis_degree_company": "UNISA",
+    "systems_analysis_degree_period": "Completed: December 2025",
+    "systems_analysis_degree_description": "I completed my degree in Systems Analysis and Development, focusing on agile methodologies, software architecture, and the development of robust solutions, applying the best market practices."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "description": "My technical skills are the foundation for building robust and efficient solutions. With a solid background in Systems Analysis and Development, I apply these tools to design, develop, and optimize systems that meet business needs."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Here are some of my recent projects, where I apply the principles of Systems Analysis and Development to create functional and efficient solutions. Each project reflects my ability to transform requirements into robust and scalable systems."
+  },
+  "certifications": {
+    "title": "Certifications",
+    "nextjs_title": "Next.js from Basic to Advanced",
+    "nextjs_provider": "Udemy",
+    "nextjs_year": "2024",
+    "nextjs_description": "Comprehensive course on Next.js, covering fundamentals and advanced web development techniques.",
+    "web_dev_title": "Complete Web Development: 20 Courses and 20 Projects",
+    "web_dev_provider": "Udemy",
+    "web_dev_year": "2023",
+    "web_dev_description": "Complete training in web development, including HTML, CSS, JavaScript, React, and more, with practical projects.",
+    "algorithms_title": "Algorithms and Programming Logic",
+    "algorithms_provider": "Udemy",
+    "algorithms_year": "2023",
+    "algorithms_description": "Course focused on programming logic and problem-solving with algorithms."
+  },
+  "contact": {
+    "title": "Let's Talk",
+    "intro_message": "Have a question or proposal, or just want to say hello? Go ahead.",
+    "contact_info_title": "Contact Information",
+    "email": "Email",
+    "phone_whatsapp": "Phone and WhatsApp",
+    "location": "Location",
+    "send_message_title": "Send a Message",
+    "name_label": "Name",
+    "email_label": "Email",
+    "message_label": "Message",
+    "send_button": "Send Message",
+    "sending_button": "Sending...",
+    "success_message": "Message sent successfully!",
+    "success_sub_message": "Thank you for your contact. I will reply soon.",
+    "error_message": "Error sending message.",
+    "error_sub_message": "Please try again or use another contact method."
+  },
+  "footer": {
+    "copyright": "All rights reserved."
+  },
+  "header": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "contact": "Contact",
+    "close_menu": "Close menu",
+    "open_menu": "Open menu"
+  }
+}

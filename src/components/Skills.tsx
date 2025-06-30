@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiExpress, SiTailwindcss, SiMongodb, SiPostgresql, SiNextdotjs, SiPrisma, SiGit, SiLinux } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 interface SkillsProps {
   isDarkMode: boolean;
@@ -21,6 +22,7 @@ const skills = [
 ];
 
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
+  const { t } = useTranslation();
   return (
     <section id="habilidades" className={`py-8 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
       <div className="max-w-6xl mx-auto px-4">
@@ -31,7 +33,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
           className={`text-2xl sm:text-3xl font-bold mb-12 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}
         >
-          Habilidades Técnicas
+          {t("skills.title")}
         </motion.h3>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +42,7 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className={`text-center max-w-3xl mx-auto mb-12 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
         >
-          Minhas habilidades técnicas são a base para a construção de soluções robustas e eficientes. Com uma sólida formação em Análise e Desenvolvimento de Sistemas, aplico essas ferramentas para projetar, desenvolver e otimizar sistemas que atendam às necessidades do negócio.
+          {t("skills.description")}
         </motion.p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skills.map((skill, index) => (

@@ -1,32 +1,35 @@
 import { motion } from "framer-motion";
 import { BadgeCheck } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface CertificationsProps {
   isDarkMode: boolean;
 }
 
-const certifications = [
-  {
-    title: "Next.js do Básico ao Avançado",
-    provider: "Udemy",
-    year: "2024",
-    description: "Curso abrangente sobre Next.js, cobrindo fundamentos e técnicas avançadas de desenvolvimento web.",
-  },
-  {
-    title: "Desenvolvimento Web Completo: 20 Cursos e 20 Projetos",
-    provider: "Udemy",
-    year: "2023",
-    description: "Formação completa em desenvolvimento web, incluindo HTML, CSS, JavaScript, React e mais, com projetos práticos.",
-  },
-  {
-    title: "Algoritmos e Lógica de Programação",
-    provider: "Udemy",
-    year: "2023",
-    description: "Curso focado em lógica de programação e resolução de problemas com algoritmos.",
-  },
-];
-
 const Certifications: React.FC<CertificationsProps> = ({ isDarkMode }) => {
+  const { t } = useTranslation();
+
+  const certifications = [
+    {
+      title: t("certifications.nextjs_title"),
+      provider: t("certifications.nextjs_provider"),
+      year: t("certifications.nextjs_year"),
+      description: t("certifications.nextjs_description"),
+    },
+    {
+      title: t("certifications.web_dev_title"),
+      provider: t("certifications.web_dev_provider"),
+      year: t("certifications.web_dev_year"),
+      description: t("certifications.web_dev_description"),
+    },
+    {
+      title: t("certifications.algorithms_title"),
+      provider: t("certifications.algorithms_provider"),
+      year: t("certifications.algorithms_year"),
+      description: t("certifications.algorithms_description"),
+    },
+  ];
+
   return (
     <section id="certificacoes" className={`py-5 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
       <div className="container px-4 mx-auto">
@@ -37,7 +40,7 @@ const Certifications: React.FC<CertificationsProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
         >
           <h2 className={`text-2xl sm:text-3xl font-bold mb-12 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}>
-            Certificações
+            {t("certifications.title")}
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
             {certifications.map((cert, index) => (
