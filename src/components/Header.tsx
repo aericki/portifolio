@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import { FaUser, FaCode, FaRocket, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaUser,
+  FaCode,
+  FaRocket,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
-
-// Componente ThemeToggle
-interface ThemeToggleProps {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
-}
 
 import ThemeToggle from "./ui/ThemeToggle"; // Import ThemeToggle directly
 
@@ -21,7 +22,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({
   activeSection,
   isDarkMode,
-  toggleDarkMode
+  toggleDarkMode,
 }) => {
   const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,9 +32,9 @@ const Header: React.FC<HeaderProps> = ({
   // Alternar visibilidade do cursor
   useEffect(() => {
     const cursorInterval = setInterval(() => {
-      setCursorVisible(prev => !prev);
+      setCursorVisible((prev) => !prev);
     }, 530);
-    
+
     return () => clearInterval(cursorInterval);
   }, []);
 
@@ -52,8 +53,30 @@ const Header: React.FC<HeaderProps> = ({
     { id: "experiencia", label: t("header.experience"), icon: <FaCode /> },
     { id: "habilidades", label: t("header.skills"), icon: <FaRocket /> },
     { id: "projetos", label: t("header.projects"), icon: <FaRocket /> },
-    { id: "certificacoes", label: t("header.certifications"), icon: <FaCode /> },
+    {
+      id: "certificacoes",
+      label: t("header.certifications"),
+      icon: <FaCode />,
+    },
     { id: "contato", label: t("header.contact"), icon: <FaEnvelope /> },
+  ];
+
+  const languages = [
+    {
+      code: "pt",
+      label: "Português",
+      flag: "https://flagsapi.com/BR/flat/64.png",
+    },
+    {
+      code: "en",
+      label: "English",
+      flag: "https://flagsapi.com/US/flat/64.png",
+    },
+    {
+      code: "es",
+      label: "Español",
+      flag: "https://flagsapi.com/ES/flat/64.png",
+    },
   ];
 
   const changeLanguage = (lng: string) => {
@@ -61,50 +84,70 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-[-4px] h-14 w-full z-40 transition-all item duration-300 ${
         scrolled ? "py-2" : "py-4"
       } ${
-        isDarkMode 
-          ? scrolled ? "bg-black/90 shadow-md shadow-red-900/10" : "bg-black/80" 
-          : scrolled ? "bg-white/95 shadow-md" : "bg-white/80"
+        isDarkMode
+          ? scrolled
+            ? "bg-black/90 shadow-md shadow-red-900/10"
+            : "bg-black/80"
+          : scrolled
+          ? "bg-white/95 shadow-md"
+          : "bg-white/80"
       } backdrop-blur-sm`}
-      style={{ marginTop: '4px' }} // Espaço para a barra de progresso (3px da barra + 1px da sombra)
+      style={{ marginTop: "4px" }} // Espaço para a barra de progresso (3px da barra + 1px da sombra)
     >
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className={`text-xl sm:text-2xl font-bold ${isDarkMode ? "text-red-600" : "text-gray-800"}`}
+          className={`text-xl sm:text-2xl font-bold ${
+            isDarkMode ? "text-red-600" : "text-gray-800"
+          }`}
         >
-          <a href="/" className="hover:opacity-80 transition-opacity flex items-center">
+          <a
+            href="/"
+            className="hover:opacity-80 transition-opacity flex items-center"
+          >
             <span className="relative">
               aericki.dev
-              <span 
-                className={`absolute -right-2 top-0 ${cursorVisible ? 'opacity-100' : 'opacity-0'} transition-opacity ${isDarkMode ? "text-red-600" : "text-gray-800"}`}
+              <span
+                className={`absolute -right-2 top-0 ${
+                  cursorVisible ? "opacity-100" : "opacity-0"
+                } transition-opacity ${
+                  isDarkMode ? "text-red-600" : "text-gray-800"
+                }`}
               >
                 _
               </span>
             </span>
           </a>
         </motion.h1>
-        
+
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             {navItems.map((item) => (
-              <motion.li 
+              <motion.li
                 key={item.id}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: navItems.findIndex(i => i.id === item.id) * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: navItems.findIndex((i) => i.id === item.id) * 0.1,
+                }}
               >
                 <a
                   href={`#${item.id}`}
                   className={`flex items-center space-x-1 hover:text-red-600 transition-colors relative group ${
-                    activeSection === item.id 
-                      ? (isDarkMode ? "text-red-600" : "text-gray-900") 
-                      : isDarkMode ? "text-gray-300" : "text-gray-600"
+                    activeSection === item.id
+                      ? isDarkMode
+                        ? "text-red-600"
+                        : "text-gray-900"
+                      : isDarkMode
+                      ? "text-gray-300"
+                      : "text-gray-600"
                   }`}
                 >
                   {activeSection === item.id ? (
@@ -113,12 +156,18 @@ const Header: React.FC<HeaderProps> = ({
                       className={`absolute -bottom-1 left-0 w-full h-0.5 ${
                         isDarkMode ? "bg-red-600" : "bg-gray-800"
                       }`}
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
                     />
                   ) : (
-                    <span className={`absolute -bottom-1 left-0 w-0 group-hover:w-full h-0.5 transition-all duration-300 ${
-                      isDarkMode ? "bg-red-600/50" : "bg-gray-800/50"
-                    }`} />
+                    <span
+                      className={`absolute -bottom-1 left-0 w-0 group-hover:w-full h-0.5 transition-all duration-300 ${
+                        isDarkMode ? "bg-red-600/50" : "bg-gray-800/50"
+                      }`}
+                    />
                   )}
                   <span className="text-sm">{item.icon}</span>
                   <span>{item.label}</span>
@@ -127,68 +176,89 @@ const Header: React.FC<HeaderProps> = ({
             ))}
           </ul>
         </nav>
-        
+
         <div className="flex items-center ">
           {/* Language Selector */}
           <div className="relative group">
             <button
               className={`px-3 py-2 rounded-md font-medium flex items-center gap-1 ${
-                isDarkMode ? "text-gray-300 hover:text-red-600" : "text-gray-700 hover:text-gray-900"
+                isDarkMode
+                  ? "text-gray-300 hover:text-red-600"
+                  : "text-gray-700 hover:text-gray-900"
               } transition-colors`}
+              aria-label="Selecionar idioma"
             >
-              {i18n.language.toUpperCase()}
+              <img
+                src={languages.find((l) => l.code === i18n.language)?.flag}
+                alt={`Bandeira do idioma atual`}
+                className="w-5 h-5 rounded-full"
+              />
               <ChevronDown size={16} />
             </button>
-            <div className={`absolute right-0 mt-2 w-28 rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100 ${
-              isDarkMode ? "bg-gray-800" : "bg-white"
-            }`}>
-              <a
-                href="#"
-                onClick={() => changeLanguage("pt")}
-                className={`block px-4 py-2 text-sm ${isDarkMode ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-gray-100"} rounded-md`}
-              >
-                Português
-              </a>
-              <a
-                href="#"
-                onClick={() => changeLanguage("en")}
-                className={`block px-4 py-2 text-sm ${isDarkMode ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-gray-100"} rounded-md`}
-              >
-                English
-              </a>
-              <a
-                href="#"
-                onClick={() => changeLanguage("es")}
-                className={`block px-4 py-2 text-sm ${isDarkMode ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-gray-100"} rounded-md`}
-              >
-                Español
-              </a>
+            <div
+              className={`absolute right-0 mt-2 w-32 rounded-md shadow-lg z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100 ${
+                isDarkMode ? "bg-gray-800" : "bg-white"
+              }`}
+            >
+              {languages.map((lang) => (
+                <a
+                  href="#"
+                  key={lang.code}
+                  onClick={() => changeLanguage(lang.code)}
+                  className={`flex items-center gap-2 px-4 py-2 text-sm rounded-md transition-colors
+                    ${
+                      i18n.language === lang.code
+                        ? isDarkMode
+                          ? "bg-gray-700 text-red-500"
+                          : "bg-gray-100 text-red-600"
+                        : isDarkMode
+                        ? "text-gray-300 hover:bg-gray-700"
+                        : "text-gray-700 hover:bg-gray-100"
+                    }`}
+                  aria-label={`Mudar para ${lang.label}`}
+                >
+                  <img
+                    src={lang.flag}
+                    alt={`Bandeira de ${lang.label}`}
+                    className="w-5 h-5 rounded-full"
+                  />
+                  {lang.label}
+                </a>
+              ))}
             </div>
           </div>
 
           <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleDarkMode} />
-          
+
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             whileTap={{ scale: 0.95 }}
             className={`md:hidden p-1.5 rounded-md ${
-              isDarkMode 
-                ? "bg-gray-800 hover:bg-gray-700" 
+              isDarkMode
+                ? "bg-gray-800 hover:bg-gray-700"
                 : "bg-gray-200 hover:bg-gray-300"
             } transition-colors`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? t("header.close_menu") : t("header.open_menu")}
+            aria-label={
+              isMobileMenuOpen ? t("header.close_menu") : t("header.open_menu")
+            }
           >
             {isMobileMenuOpen ? (
-              <FaTimes className={isDarkMode ? "text-red-500" : "text-gray-800"} size={18} />
+              <FaTimes
+                className={isDarkMode ? "text-red-500" : "text-gray-800"}
+                size={18}
+              />
             ) : (
-              <FaBars className={isDarkMode ? "text-red-500" : "text-gray-800"} size={18} />
+              <FaBars
+                className={isDarkMode ? "text-red-500" : "text-gray-800"}
+                size={18}
+              />
             )}
           </motion.button>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -201,14 +271,14 @@ const Header: React.FC<HeaderProps> = ({
               isDarkMode ? "bg-black/95" : "bg-white/95"
             } shadow-lg`}
           >
-            <motion.ul 
+            <motion.ul
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
               className="flex flex-col py-4 px-4"
             >
               {navItems.map((item, index) => (
-                <motion.li 
+                <motion.li
                   key={item.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -222,9 +292,9 @@ const Header: React.FC<HeaderProps> = ({
                         ? isDarkMode
                           ? "bg-gray-800 text-red-500"
                           : "bg-gray-200 text-gray-900"
-                        : isDarkMode 
-                          ? "text-gray-300 hover:bg-gray-800/60" 
-                          : "text-gray-700 hover:bg-gray-200/60"
+                        : isDarkMode
+                        ? "text-gray-300 hover:bg-gray-800/60"
+                        : "text-gray-700 hover:bg-gray-200/60"
                     } transition-all`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

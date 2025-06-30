@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Download, ExternalLink, Github, Mail, ChevronDown } from "lucide-react";
 import { TypeAnimation } from 'react-type-animation';
 import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
 
 interface EnhancedHeroProps {
   isDarkMode: boolean;
@@ -105,6 +106,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
             
             <div className={`h-12 overflow-hidden mb-8 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
               <TypeAnimation
+                key={i18n.language}
                 sequence={[
                   t('hero.role_web_developer'),
                   2000,

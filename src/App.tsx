@@ -25,6 +25,8 @@ function App() {
       document.documentElement.classList.remove("dark");
     }
 
+    
+
     const handleScroll = () => {
       const sections = [
         "sobre",
@@ -58,6 +60,8 @@ function App() {
     document.title = t("page_title");
   }, [isDarkMode, t, i18n.language]); // Adicionar i18n.language como dependência
 
+
+  
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
