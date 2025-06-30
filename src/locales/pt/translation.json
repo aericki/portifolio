@@ -36,7 +36,14 @@
   },
   "projects": {
     "title": "Projetos",
-    "description": "Aqui estão alguns dos meus projetos recentes, onde aplico os princípios de Análise e Desenvolvimento de Sistemas para criar soluções funcionais e eficientes. Cada projeto reflete minha capacidade de transformar requisitos em sistemas robustos e escaláveis."
+    "description": "Aqui estão alguns dos meus projetos recentes, onde aplico os princípios de Análise e Desenvolvimento de Sistemas para criar soluções funcionais e eficientes. Cada projeto reflete minha capacidade de transformar requisitos em sistemas robustos e escaláveis.",
+    "breaking_locations_title": "Breaking Locations",
+    "breaking_locations_description": "Uma plataforma web para encontrar locais de treino de breaking.",
+    "preview": "Preview do projeto",
+    "view_site": "Visualizar Site",
+    "technologies_used": "Tecnologias utilizadas:",
+    "view_project": "Ver Projeto",
+    "visualize": "Visualizar"
   },
   "certifications": {
     "title": "Certificações",
@@ -69,10 +76,20 @@
     "success_message": "Mensagem enviada com sucesso!",
     "success_sub_message": "Obrigado pelo contato. Responderei em breve.",
     "error_message": "Erro ao enviar mensagem.",
-    "error_sub_message": "Por favor, tente novamente ou use outro método de contato."
+    "error_sub_message": "Por favor, tente novamente ou use outro método de contato.",
+    "name_placeholder": "Seu nome completo",
+    "email_placeholder": "Seu melhor e-mail",
+    "message_placeholder": "Como posso ajudar? Escreva sua mensagem aqui"
   },
   "footer": {
-    "copyright": "Todos os direitos reservados."
+    "copyright": "Todos os direitos reservados.",
+    "about_title": "Sobre",
+    "about_description": "Breve descrição sobre você ou seu portfólio.",
+    "quick_links_title": "Links Rápidos",
+    "contact_title": "Contato",
+    "location_text": "Peruíbe, SP - Brasil",
+    "developed_with": "Desenvolvido com",
+    "made_with_love": "Feito com ❤️ por Aericki"
   },
   "header": {
     "about": "Sobre",

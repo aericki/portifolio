@@ -36,7 +36,14 @@
   },
   "projects": {
     "title": "Projects",
-    "description": "Here are some of my recent projects, where I apply the principles of Systems Analysis and Development to create functional and efficient solutions. Each project reflects my ability to transform requirements into robust and scalable systems."
+    "description": "Here are some of my recent projects, where I apply the principles of Systems Analysis and Development to create functional and efficient solutions. Each project reflects my ability to transform requirements into robust and scalable systems.",
+    "breaking_locations_title": "Breaking Locations",
+    "breaking_locations_description": "A web platform for finding breaking training spots.",
+    "preview": "Project Preview",
+    "view_site": "View Site",
+    "technologies_used": "Technologies used:",
+    "view_project": "View Project",
+    "visualize": "Visualize"
   },
   "certifications": {
     "title": "Certifications",
@@ -69,10 +76,20 @@
     "success_message": "Message sent successfully!",
     "success_sub_message": "Thank you for your contact. I will reply soon.",
     "error_message": "Error sending message.",
-    "error_sub_message": "Please try again or use another contact method."
+    "error_sub_message": "Please try again or use another contact method.",
+    "name_placeholder": "Your full name",
+    "email_placeholder": "Your best email",
+    "message_placeholder": "How can I help you? Write your message here"
   },
   "footer": {
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved.",
+    "about_title": "About",
+    "about_description": "Short description about you or your portfolio.",
+    "quick_links_title": "Quick Links",
+    "contact_title": "Contact",
+    "location_text": "Peruíbe, SP - Brazil",
+    "developed_with": "Developed with",
+    "made_with_love": "Made with ❤️ by Aericki"
   },
   "header": {
     "about": "About",

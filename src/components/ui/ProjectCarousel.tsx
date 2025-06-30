@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, Eye, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 interface ProjectCarouselProps {
   title: string;
@@ -20,6 +21,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
   isDarkMode,
 }) => {
   const [showPreview, setShowPreview] = useState(false);
+  const { t } = useTranslation();
 
   // Função para abrir/fechar o modal com iframe
   const togglePreview = () => {
@@ -29,21 +31,35 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
   };
 
   return (
-    <div className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg overflow-hidden`}>
+    <div
+      className={`${
+        isDarkMode ? "bg-gray-800" : "bg-white"
+      } rounded-lg shadow-lg overflow-hidden`}
+    >
       <div className="flex flex-col md:flex-row">
         {/* Área de preview/thumbnail */}
         <div className="md:w-1/2 relative h-64 md:h-auto">
-          <div className={`flex items-center justify-center h-64 md:h-80 ${
-            isDarkMode ? "bg-gray-700" : "bg-gray-200"
-          }`}>
+          <div
+            className={`flex items-center justify-center h-64 md:h-80 ${
+              isDarkMode ? "bg-gray-700" : "bg-gray-200"
+            }`}
+          >
             <div className="flex flex-col items-center justify-center space-y-4">
-              <div className={`text-3xl ${isDarkMode ? "text-gray-500" : "text-gray-400"}`}>
+              <div
+                className={`text-3xl ${
+                  isDarkMode ? "text-gray-500" : "text-gray-400"
+                }`}
+              >
                 <Eye />
               </div>
-              <p className={`text-center ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
-                Preview do projeto
+              <p
+                className={`text-center ${
+                  isDarkMode ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
+                {t("projects.preview")}
               </p>
-              
+
               {liveUrl && (
                 <button
                   onClick={togglePreview}
@@ -54,7 +70,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
                   } transition-colors`}
                 >
                   <Eye size={16} />
-                  Visualizar Site
+                  {t("projects.view_site")}
                 </button>
               )}
             </div>
@@ -63,16 +79,26 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
 
         {/* Informações do projeto */}
         <div className="md:w-1/2 p-6">
-          <h3 className={`text-xl font-bold mb-2 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
+          <h3
+            className={`text-xl font-bold mb-2 ${
+              isDarkMode ? "text-white" : "text-gray-800"
+            }`}
+          >
             {title}
           </h3>
-          <p className={`mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
+          <p
+            className={`mb-4 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+          >
             {description}
           </p>
-          
+
           <div className="mb-4">
-            <h4 className={`text-sm font-semibold mb-2 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
-              Tecnologias utilizadas:
+            <h4
+              className={`text-sm font-semibold mb-2 ${
+                isDarkMode ? "text-gray-300" : "text-gray-700"
+              }`}
+            >
+              {t("projects.technologies_used")}
             </h4>
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech) => (
@@ -89,7 +115,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
               ))}
             </div>
           </div>
-          
+
           <div className="flex gap-3">
             {liveUrl && (
               <a
@@ -103,10 +129,10 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
                 } transition-colors`}
               >
                 <ExternalLink size={16} />
-                Ver projeto
+                {t("projects.view_project")}
               </a>
             )}
-            
+
             {repoUrl && (
               <a
                 href={repoUrl}
@@ -122,7 +148,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
                 Repositório
               </a>
             )}
-            
+
             {liveUrl && (
               <button
                 onClick={togglePreview}
@@ -133,13 +159,13 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
                 } transition-colors`}
               >
                 <Eye size={16} />
-                Visualizar
+                {t("projects.visualize")}
               </button>
             )}
           </div>
         </div>
       </div>
-      
+
       {/* Modal com iframe */}
       <AnimatePresence>
         {showPreview && liveUrl && (
@@ -162,15 +188,15 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
               <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                 <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-500"></div>
               </div>
-              
-              <iframe 
+
+              <iframe
                 src={liveUrl}
                 title={`${title} preview`}
                 className="w-full h-full border-0 relative z-10"
                 loading="lazy"
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
               />
-              
+
               <button
                 onClick={togglePreview}
                 className="absolute top-4 right-4 p-2 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 transition-colors z-20"

@@ -21,34 +21,50 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
     {
       title: t("projects.breaking_locations_title"),
       description: t("projects.breaking_locations_description"),
-      technologies: ["TypeScript", "React", "Node.js", "Express", "Tailwind CSS", "MongoDB"],
-      liveUrl: "https://beta-breakinglocations.netlify.app"
-    }
+      technologies: [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Express",
+        "Tailwind CSS",
+        "MongoDB",
+      ],
+      liveUrl: "https://beta-breakinglocations.netlify.app",
+    },
   ];
 
   return (
-    <section id="projetos" className={`py-10 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
+    <section
+      id="projetos"
+      className={`py-10 ${
+        isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"
+      }`}
+    >
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className={`text-2xl sm:text-3xl font-bold mb-7 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}
+          className={`text-2xl sm:text-3xl font-bold mb-7 text-center ${
+            isDarkMode ? "text-red-600" : "text-gray-800"
+          }`}
         >
           {t("projects.title")}
         </motion.h2>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`text-center max-w-3xl mx-auto mb-12  ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+          className={`text-center max-w-3xl mx-auto mb-12  ${
+            isDarkMode ? "text-gray-300" : "text-gray-600"
+          }`}
         >
           {t("projects.description")}
         </motion.p>
-        
+
         <div className="space-y-12">
           {projects.map((project, index) => (
             <motion.div
@@ -69,7 +85,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
             </motion.div>
           ))}
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

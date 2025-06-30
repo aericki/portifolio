@@ -36,7 +36,14 @@
   },
   "projects": {
     "title": "Proyectos",
-    "description": "Aquí están algunos de mis proyectos recientes, donde aplico los principios de Análisis y Desarrollo de Sistemas para crear soluciones funcionales y eficientes. Cada proyecto refleja mi capacidad para transformar requisitos en sistemas robustos y escalables."
+    "description": "Aquí están algunos de mis proyectos recientes, donde aplico los principios de Análisis y Desarrollo de Sistemas para crear soluciones funcionales y eficientes. Cada proyecto refleja mi capacidad para transformar requisitos en sistemas robustos y escalables.",
+    "breaking_locations_title": "Breaking Locations",
+    "breaking_locations_description": "Una plataforma web para encontrar lugares de entrenamiento de breaking.",
+    "preview": "Vista previa del proyecto",
+    "view_site": "Ver Sitio",
+    "technologies_used": "Tecnologías utilizadas:",
+    "view_project": "Ver Proyecto",
+    "visualize": "Visualizar"
   },
   "certifications": {
     "title": "Certificaciones",
@@ -69,10 +76,20 @@
     "success_message": "¡Mensaje enviado con éxito!",
     "success_sub_message": "Gracias por tu contacto. Responderé pronto.",
     "error_message": "Error al enviar el mensaje.",
-    "error_sub_message": "Por favor, inténtalo de nuevo o usa otro método de contacto."
+    "error_sub_message": "Por favor, inténtalo de nuevo o usa otro método de contacto.",
+    "name_placeholder": "Su nombre completo",
+    "email_placeholder": "Su mejor correo electrónico",
+    "message_placeholder": "¿Cómo puedo ayudarle? Escriba su mensaje aquí"
   },
   "footer": {
-    "copyright": "Todos los derechos reservados."
+    "copyright": "Todos los derechos reservados.",
+    "about_title": "Sobre mí",
+    "about_description": "Breve descripción sobre ti o tu portafolio.",
+    "quick_links_title": "Enlaces Rápidos",
+    "contact_title": "Contacto",
+    "location_text": "Peruíbe, SP - Brasil",
+    "developed_with": "Desarrollado con",
+    "made_with_love": "Hecho con ❤️ por Aericki"
   },
   "header": {
     "about": "Sobre",
