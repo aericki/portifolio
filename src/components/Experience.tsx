@@ -23,9 +23,9 @@ const experiences = [
   {
     title: "Graduação em Análise e Desenvolvimento de Sistemas",
     company: "UNISA",
-    period: "Conclusão Prevista: Dezembro 2025",
-    description: "Atualmente cursando graduação em Análise e Desenvolvimento de Sistemas, focando em tecnologias web modernas e práticas de desenvolvimento de software.",
-    technologies: ["Estrutura dados", "Boas Práticas", "Banco de Dados"],
+    period: "Concluído: Dezembro 2025",
+    description: "Concluí a graduação em Análise e Desenvolvimento de Sistemas, com foco em metodologias ágeis, arquitetura de software e desenvolvimento de soluções robustas, aplicando as melhores práticas do mercado.",
+    technologies: ["Análise de Sistemas", "Desenvolvimento de Software", "Metodologias Ágeis", "Banco de Dados", "Estrutura de Dados", "Boas Práticas"],
   },
 ];
 

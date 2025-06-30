@@ -33,6 +33,15 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
         >
           Habilidades Técnicas
         </motion.h3>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className={`text-center max-w-3xl mx-auto mb-12 ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+        >
+          Minhas habilidades técnicas são a base para a construção de soluções robustas e eficientes. Com uma sólida formação em Análise e Desenvolvimento de Sistemas, aplico essas ferramentas para projetar, desenvolver e otimizar sistemas que atendam às necessidades do negócio.
+        </motion.p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <motion.div

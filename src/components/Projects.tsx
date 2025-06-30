@@ -51,8 +51,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className={`text-center max-w-3xl mx-auto mb-12  ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
         >
-          Aqui estão alguns dos meus projetos recentes. Cada projeto é uma oportunidade 
-          para aprender novas tecnologias e aprimorar minhas habilidades.
+          Aqui estão alguns dos meus projetos recentes, onde aplico os princípios de Análise e Desenvolvimento de Sistemas para criar soluções funcionais e eficientes. Cada projeto reflete minha capacidade de transformar requisitos em sistemas robustos e escaláveis.
         </motion.p>
         
         <div className="space-y-12">

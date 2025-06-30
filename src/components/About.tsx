@@ -23,7 +23,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className={`text-base sm:text-lg text-center ${isDarkMode ? "text-gray-300" : "text-gray-600"} px-20 text-justify text-wrap `}
       >
-        Sou estudante de Análise e Desenvolvimento de Sistemas na UNISA (conclusão em 2025), apaixonado por desenvolvimento web. Trabalho com JavaScript, TypeScript, Node.js e React, criando soluções eficientes para frontend e backend. Busco uma oportunidade como Desenvolvedor Web Júnior ou Estagiário para crescer e contribuir com projetos únicos.
+        Sou um profissional recém-formado em Análise e Desenvolvimento de Sistemas pela UNISA, com uma paixão sólida por transformar ideias em soluções web eficientes e intuitivas. Minha expertise abrange o desenvolvimento frontend e backend, utilizando tecnologias modernas como JavaScript, TypeScript, Node.js e React. Busco uma oportunidade para aplicar meus conhecimentos e contribuir com projetos inovadores, sempre focado em otimização e boas práticas de desenvolvimento.
       </motion.p>
     </section>
   );

@@ -106,6 +106,8 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                 sequence={[
                   'Desenvolvedor Web',
                   2000,
+                  'Analista de Sistemas',
+                  2000,
                   'Back-end',
                   3000,
                   'Front-end',
