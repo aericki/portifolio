@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiExpress, SiTailwindcss, SiMongodb, SiPostgresql, SiPrisma, SiGit, SiLinux, SiGo } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiExpress, SiTailwindcss, SiMongodb, SiPostgresql, SiPrisma, SiGit, SiLinux, SiGo, SiPython, SiDocker, SiSqlite } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 interface SkillsProps {
@@ -11,14 +11,17 @@ const skills = [
   { name: "TypeScript", icon: SiTypescript, color: "text-blue-500" },
   { name: "React", icon: SiReact, color: "text-cyan-400" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
+  { name: "Golang", icon: SiGo, color: "text-cyan-400" },
+  { name: "Python", icon: SiPython, color: "text-yellow-300" },
   { name: "Express", icon: SiExpress, color: "text-gray-500" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
   { name: "Prisma", icon: SiPrisma, color: "text-indigo-400" },
   { name: "MongoDB", icon: SiMongodb, color: "text-green-600" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400" },
+  { name: "SQLite", icon: SiSqlite, color: "text-blue-300" },
+  { name: "Docker", icon: SiDocker, color: "text-blue-500" },
   { name: "Git", icon: SiGit, color: "text-orange-600" },
   { name: "Linux", icon: SiLinux, color: "text-gray-300" },
-  { name: "Golang", icon: SiGo, color: "text-cyan-400" },
 ];
 
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {

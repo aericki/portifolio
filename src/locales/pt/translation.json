@@ -3,24 +3,29 @@
   "hero": {
     "greeting": "Olá, me chamo",
     "name": "Aericki",
-    "role_web_developer": "Desenvolvedor Web",
+    "role_web_developer": "Desenvolvedor Full-Stack",
     "role_systems_analyst": "Analista de Sistemas",
-    "role_backend": "Back-end",
-    "role_frontend": "Front-end",
+    "role_backend": "Back-end Developer",
+    "role_frontend": "Front-end Developer",
+    "role_founder": "Fundador — Best Breakers",
     "download_cv": "Baixar Currículo",
     "contact_me": "Entrar em Contato",
     "view_more_projects": "Ver mais projetos no GitHub"
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Desenvolvedor focado na criação de soluções web eficientes e intuitivas. Com experiência em frontend e backend, utilizo tecnologias como JavaScript, TypeScript, Node.js e React para transformar ideias em produtos de qualidade. Estou sempre em busca de novos desafios e oportunidades para aplicar e expandir meus conhecimentos, com foco em otimização e boas práticas de desenvolvimento."
+    "description": "Desenvolvedor full-stack e fundador da Best Breakers — sistema de julgamento eletrônico para batalhas de breaking utilizado em campeonatos oficiais em São Paulo e Mato Grosso. Idealizo, projeto e desenvolvo soluções completas: do backend em Go e Node.js ao frontend em React com TypeScript, passando por votação em tempo real via WebSocket e gestão de campeonatos. Formado em Análise e Desenvolvimento de Sistemas, busco constantemente unir tecnologia e impacto real no esporte."
   },
   "experience": {
     "title": "Experiência",
-    "web_developer_title": "Desenvolvedor Web",
-    "web_developer_company": "Projetos Pessoais",
+    "bestbreakers_founder_title": "Criador & Desenvolvedor — Best Breakers",
+    "bestbreakers_founder_company": "Best Breakers",
+    "bestbreakers_founder_period": "2024 - Presente",
+    "bestbreakers_founder_description": "Criador e desenvolvedor do sistema de julgamento eletrônico para batalhas de breaking. Plataforma utilizada em 10 campeonatos, com 196 atletas, 2 estados (SP e MT) e 6 crews. Jurados votam por tablet com resultados em tempo real via WebSocket, gestão completa de campeonatos, chaveamento, rounds e configurações especiais para o cenário esportivo do breaking.",
+    "web_developer_title": "Desenvolvedor Web Full-Stack",
+    "web_developer_company": "Projetos Pessoais & Freelance",
     "web_developer_period": "2023 - Presente",
-    "web_developer_description": "Desenvolvimento de aplicações web full-stack, desde a concepção da API RESTful com Node.js e Express até a implementação de interfaces de usuário reativas com React e TypeScript. Principal projeto: Breaking Locations (Beta), uma plataforma para a comunidade de breaking encontrar locais de treino.",
+    "web_developer_description": "Desenvolvimento de aplicações web full-stack, desde APIs RESTful com Node.js, Express e Go até interfaces reativas com React e TypeScript. Projetos incluem plataformas de ranking, landing pages para clientes e ferramentas para a comunidade de breaking.",
     "computer_technician_title": "Técnico de Manutenção de Computadores",
     "computer_technician_company": "Peruíbe, SP",
     "computer_technician_period": "Experiência Anterior",
@@ -28,7 +33,7 @@
     "systems_analysis_degree_title": "Graduação em Análise e Desenvolvimento de Sistemas",
     "systems_analysis_degree_company": "UNISA",
     "systems_analysis_degree_period": "Concluído: Dezembro 2025",
-    "systems_analysis_degree_description": "Graduação com foco em todo o ciclo de vida do desenvolvimento de software, incluindo metodologias ágeis, arquitetura de software, e design de banco de dados. Aprendi a desenvolver soluções robustas e escaláveis, aplicando as melhores práticas do mercado."
+    "systems_analysis_degree_description": "Graduação com foco em todo o ciclo de vida do desenvolvimento de software, incluindo metodologias ágeis, arquitetura de software e design de banco de dados. Aprendi a desenvolver soluções robustas e escaláveis, aplicando as melhores práticas do mercado."
   },
   "skills": {
     "title": "Habilidades Técnicas",
@@ -36,14 +41,26 @@
   },
   "projects": {
     "title": "Projetos",
-    "description": "A seguir, alguns projetos que demonstram minhas habilidades em ação. Cada um representa um desafio diferente, desde a concepção da ideia até a implementação final, utilizando as tecnologias mais adequadas para cada caso.",
+    "description": "Projetos reais em produção que demonstram minha capacidade de idealizar, projetar e entregar soluções completas — do conceito à implementação.",
+    "featured": "Projeto Principal",
+    "bestbreakers_system_title": "Best Breakers — Sistema de Julgamento Eletrônico",
+    "bestbreakers_system_description": "Plataforma completa de julgamento eletrônico para batalhas de breaking. Jurados votam por tablet com resultados em tempo real via WebSocket. Gestão de campeonatos, chaveamento automático, configurações de rounds e rounds especiais para o cenário esportivo. Em uso em 10 campeonatos, 196 atletas cadastrados, 2 estados (SP e MT), 6 crews.",
+    "bestbreakers_system_stat_championships": "10 Campeonatos",
+    "bestbreakers_system_stat_athletes": "196 Atletas",
+    "bestbreakers_system_stat_states": "2 Estados",
+    "bestbreakers_system_stat_crews": "6 Crews",
+    "bestbreakers_ranking_title": "Best Breakers — Ranking Oficial",
+    "bestbreakers_ranking_description": "Plataforma web para publicação de rankings oficiais de breaking por estado e por evento, com suporte a múltiplos idiomas (PT, EN, ES). Rankings por categorias (B-Boy, B-Girl, Juvenil, Kids, Senior, 3vs3) com sistema de pontuação e multiplicadores por evento.",
+    "estela_logistics_title": "Estela Logística — Landing Page",
+    "estela_logistics_description": "Landing page profissional desenvolvida para empresa de logística. Design moderno e responsivo com foco em conversão e apresentação dos serviços da empresa.",
     "breaking_locations_title": "Breaking Locations",
-    "breaking_locations_description": "Plataforma web que conecta dançarinos de breaking a locais de treino. O projeto inclui um mapa interativo, cadastro de locais e sistema de avaliação. Desenvolvido com o objetivo de fortalecer a comunidade local de breaking.",
+    "breaking_locations_description": "Plataforma web que conecta dançarinos de breaking a locais de treino. Inclui mapa interativo, cadastro de locais e sistema de avaliação.",
     "preview": "Preview do projeto",
     "view_site": "Visualizar Site",
-    "technologies_used": "Tecnologias utilizadas:",
+    "technologies_used": "Tecnologias:",
     "view_project": "Ver Projeto",
-    "visualize": "Visualizar"
+    "visualize": "Visualizar",
+    "source_code": "Código Fonte"
   },
   "certifications": {
     "title": "Certificações",
@@ -84,7 +101,7 @@
   "footer": {
     "copyright": "Todos os direitos reservados.",
     "about_title": "Sobre",
-    "about_description": "Breve descrição sobre você ou seu portfólio.",
+    "about_description": "Desenvolvedor full-stack e fundador da Best Breakers. Criando soluções tecnológicas para o cenário esportivo do breaking.",
     "quick_links_title": "Links Rápidos",
     "contact_title": "Contato",
     "location_text": "Peruíbe, SP - Brasil",

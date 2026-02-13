@@ -11,11 +11,18 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
 
   const experiences = [
     {
+      title: t("experience.bestbreakers_founder_title"),
+      company: t("experience.bestbreakers_founder_company"),
+      period: t("experience.bestbreakers_founder_period"),
+      description: t("experience.bestbreakers_founder_description"),
+      technologies: ["Go", "React", "TypeScript", "WebSocket", "SQLite", "Tailwind CSS", "Docker"],
+    },
+    {
       title: t("experience.web_developer_title"),
       company: t("experience.web_developer_company"),
       period: t("experience.web_developer_period"),
       description: t("experience.web_developer_description"),
-      technologies: ["Node.js,", "Express", "TypeScript", "JavaScript", "React", "Node.js", "Express", "Tailwind CSS"],
+      technologies: ["Node.js", "Express", "TypeScript", "React", "Go", "Tailwind CSS", "PostgreSQL"],
     },
     {
       title: t("experience.computer_technician_title"),

@@ -108,12 +108,14 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
               <TypeAnimation
                 key={i18n.language}
                 sequence={[
+                  t('hero.role_founder'),
+                  3000,
                   t('hero.role_web_developer'),
                   2000,
                   t('hero.role_systems_analyst'),
                   2000,
                   t('hero.role_backend'),
-                  3000,
+                  2000,
                   t('hero.role_frontend'),
                   2000,
                 ]}
