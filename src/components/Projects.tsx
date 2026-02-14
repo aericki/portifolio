@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Trophy, Users, MapPin, Shield } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Trophy,
+  Users,
+  MapPin,
+  Shield,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface ProjectsProps {

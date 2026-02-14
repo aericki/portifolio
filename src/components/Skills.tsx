@@ -1,5 +1,21 @@
 import { motion } from "framer-motion";
-import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiExpress, SiTailwindcss, SiMongodb, SiPostgresql, SiPrisma, SiGit, SiLinux, SiGo, SiPython, SiDocker, SiSqlite } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiTailwindcss,
+  SiMongodb,
+  SiPostgresql,
+  SiPrisma,
+  SiGit,
+  SiLinux,
+  SiGo,
+  SiPython,
+  SiDocker,
+  SiSqlite,
+} from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 interface SkillsProps {
@@ -27,7 +43,10 @@ const skills = [
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   const { t } = useTranslation();
   return (
-    <section id="habilidades" className={`py-8 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
+    <section
+      id="habilidades"
+      className={`py-8 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}
+    >
       <div className="max-w-6xl mx-auto px-4">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
@@ -68,9 +87,15 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
                     transition: { duration: 0.6 },
                   }}
                 >
-                  <skill.icon className={`w-10 sm:w-12 h-10 sm:h-12 ${skill.color} mb-4`} />
+                  <skill.icon
+                    className={`w-10 sm:w-12 h-10 sm:h-12 ${skill.color} mb-4`}
+                  />
                 </motion.div>
-                <h4 className={`font-semibold text-sm sm:text-base ${isDarkMode ? "text-white" : "text-gray-800"}`}>{skill.name}</h4>
+                <h4
+                  className={`font-semibold text-sm sm:text-base ${isDarkMode ? "text-white" : "text-gray-800"}`}
+                >
+                  {skill.name}
+                </h4>
               </div>
             </motion.div>
           ))}

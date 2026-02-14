@@ -1,0 +1,39 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "aericki.me"
+        }
+      ],
+      "destination": "https://aericki.dev/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.aericki.me"
+        }
+      ],
+      "destination": "https://aericki.dev/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.aericki.dev"
+        }
+      ],
+      "destination": "https://aericki.dev/$1",
+      "permanent": true
+    }
+  ]
+}

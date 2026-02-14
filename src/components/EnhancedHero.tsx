@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
-import { Download, ExternalLink, Github, Mail, ChevronDown } from "lucide-react";
-import { TypeAnimation } from 'react-type-animation';
+import {
+  Download,
+  ExternalLink,
+  Github,
+  Mail,
+  ChevronDown,
+} from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 
@@ -13,8 +19,12 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-16 overflow-hidden">
       {/* Animated background */}
-      <div className={`absolute inset-0 -z-10 ${isDarkMode ? 'opacity-20' : 'opacity-10'}`}>
-        <div className={`absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,${isDarkMode ? "#ff0000" : "#686868"}_0%,transparent_50%)]`} />
+      <div
+        className={`absolute inset-0 -z-10 ${isDarkMode ? "opacity-20" : "opacity-10"}`}
+      >
+        <div
+          className={`absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,${isDarkMode ? "#ff0000" : "#686868"}_0%,transparent_50%)]`}
+        />
         <svg
           className="absolute top-0 left-0 w-full h-full"
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +33,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
         >
           <motion.path
             d="M0,90 Q20,60 40,80 T80,70 T100,80 V100 H0 Z"
-            fill={isDarkMode ? '#300' : '#aaa'}
+            fill={isDarkMode ? "#300" : "#aaa"}
             initial={{ y: 100 }}
             animate={{ y: 0 }}
             transition={{
@@ -35,7 +45,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
           />
           <motion.path
             d="M0,90 Q30,50 50,70 T100,60 V100 H0 Z"
-            fill={isDarkMode ? '#500' : '#ccc'}
+            fill={isDarkMode ? "#500" : "#ccc"}
             opacity={0.5}
             initial={{ y: 100 }}
             animate={{ y: 0 }}
@@ -60,12 +70,12 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
           >
             <motion.div
               className={`absolute -inset-1 rounded-full ${isDarkMode ? "bg-red-600" : "bg-gray-700"}`}
-              animate={{ 
+              animate={{
                 boxShadow: [
                   `0 0 5px 2px ${isDarkMode ? "rgba(220, 38, 38, 0.6)" : "rgba(55, 65, 81, 0.6)"}`,
                   `0 0 12px 4px ${isDarkMode ? "rgba(220, 38, 38, 0.4)" : "rgba(55, 65, 81, 0.4)"}`,
                   `0 0 5px 2px ${isDarkMode ? "rgba(220, 38, 38, 0.6)" : "rgba(55, 65, 81, 0.6)"}`,
-                ]
+                ],
               }}
               transition={{
                 duration: 2,
@@ -74,9 +84,9 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
               }}
             />
             <div className="w-32 h-32 rounded-full overflow-hidden relative">
-              <img 
-                src="https://github.com/aericki.png" 
-                alt="Aericki Ferreira" 
+              <img
+                src="https://github.com/aericki.png"
+                alt="Aericki Ferreira"
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -93,7 +103,9 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className={`text-4xl sm:text-6xl font-bold tracking-tight mb-6 ${isDarkMode ? "text-white" : "text-gray-800"}`}>
+            <h1
+              className={`text-4xl sm:text-6xl font-bold tracking-tight mb-6 ${isDarkMode ? "text-white" : "text-gray-800"}`}
+            >
               {t("hero.greeting")}{" "}
               <motion.span
                 className={`bg-gradient-to-r ${isDarkMode ? "from-red-600 to-red-400" : "from-gray-700 to-gray-500"} bg-clip-text text-transparent`}
@@ -103,20 +115,22 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                 {t("hero.name")}
               </motion.span>
             </h1>
-            
-            <div className={`h-12 overflow-hidden mb-8 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
+
+            <div
+              className={`h-12 overflow-hidden mb-8 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
+            >
               <TypeAnimation
                 key={i18n.language}
                 sequence={[
-                  t('hero.role_founder'),
+                  t("hero.role_founder"),
                   3000,
-                  t('hero.role_web_developer'),
+                  t("hero.role_web_developer"),
                   2000,
-                  t('hero.role_systems_analyst'),
+                  t("hero.role_systems_analyst"),
                   2000,
-                  t('hero.role_backend'),
+                  t("hero.role_backend"),
                   2000,
-                  t('hero.role_frontend'),
+                  t("hero.role_frontend"),
                   2000,
                 ]}
                 wrapper="p"
@@ -125,9 +139,12 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                 className="text-xl sm:text-2xl mb-8"
               />
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <a
                   href="https://docs.google.com/document/d/1JL35R5Zy3-iTUBGkvkGPMKPhthSUZ0zDrgPACsMPMVw/edit?usp=sharing"
                   target="_blank"
@@ -138,8 +155,11 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                   {t("hero.download_cv")}
                 </a>
               </motion.div>
-              
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <a
                   href="#contato"
                   className={`${isDarkMode ? "border border-red-600 text-red-600 hover:bg-red-600 hover:text-white" : "border border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white"} px-6 py-3 rounded-full font-medium transition inline-flex items-center`}
@@ -149,7 +169,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                 </a>
               </motion.div>
             </div>
-            
+
             <div className="flex justify-center space-x-4 mb-12">
               <motion.a
                 href="https://github.com/aericki"
@@ -160,7 +180,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
               >
                 <Github size={20} />
               </motion.a>
-              
+
               <motion.a
                 href="https://linkedin.com/in/aericki"
                 target="_blank"
@@ -174,7 +194,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
           </motion.div>
         </div>
       </div>
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -183,7 +203,9 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
         whileHover={{ y: [0, -8, 0] }}
       >
         <a href="#sobre" className="block">
-          <ChevronDown className={`h-8 w-8 ${isDarkMode ? "text-red-600" : "text-gray-600"}`} />
+          <ChevronDown
+            className={`h-8 w-8 ${isDarkMode ? "text-red-600" : "text-gray-600"}`}
+          />
         </a>
       </motion.div>
     </section>
