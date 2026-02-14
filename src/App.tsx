@@ -56,9 +56,56 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Definir o título da página com base na tradução
+    const seoLocaleMap: Record<string, string> = {
+      pt: "pt_BR",
+      en: "en_US",
+      es: "es_ES",
+    };
+
+    const pageTitle = t("page_title");
+    const pageDescription = t("seo_description");
+    const pageKeywords = t("seo_keywords");
+    const currentUrl = `${window.location.origin}${window.location.pathname}`;
+    const currentLocale = seoLocaleMap[i18n.language] ?? "pt_BR";
+
     document.title = t("page_title");
-  }, [isDarkMode, t, i18n.language]); // Adicionar i18n.language como dependência
+    document.documentElement.lang = i18n.language;
+
+    const upsertMetaTag = (
+      attribute: "name" | "property",
+      key: string,
+      content: string
+    ) => {
+      let tag = document.querySelector(`meta[${attribute}="${key}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute(attribute, key);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+
+    const upsertLinkTag = (rel: string, href: string) => {
+      let linkTag = document.querySelector(`link[rel="${rel}"]`);
+      if (!linkTag) {
+        linkTag = document.createElement("link");
+        linkTag.setAttribute("rel", rel);
+        document.head.appendChild(linkTag);
+      }
+      linkTag.setAttribute("href", href);
+    };
+
+    upsertMetaTag("name", "description", pageDescription);
+    upsertMetaTag("name", "keywords", pageKeywords);
+    upsertMetaTag("property", "og:title", pageTitle);
+    upsertMetaTag("property", "og:description", pageDescription);
+    upsertMetaTag("property", "og:url", currentUrl);
+    upsertMetaTag("property", "og:locale", currentLocale);
+    upsertMetaTag("name", "twitter:title", pageTitle);
+    upsertMetaTag("name", "twitter:description", pageDescription);
+
+    upsertLinkTag("canonical", currentUrl);
+  }, [t, i18n.language]);
 
 
   

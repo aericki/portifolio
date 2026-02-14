@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: aericki.dev
+Sitemap: https://aericki.dev/sitemap.xml

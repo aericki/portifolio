@@ -51,7 +51,7 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                 <Linkedin size={18} />
               </a>
               <a 
-                href="mailto:aerickidev@gmail.com" 
+                href="mailto:aericki@gmail.com" 
                 className={`p-2 rounded-full ${
                   isDarkMode 
                     ? "bg-gray-800 hover:bg-gray-700 text-gray-300" 
@@ -138,10 +138,10 @@ const Footer: React.FC<FooterProps> = ({ isDarkMode }) => {
                   <Mail size={16} />
                 </div>
                 <a 
-                  href="mailto:aerickidev@gmail.com" 
+                  href="mailto:aericki@gmail.com" 
                   className="hover:text-red-600 transition-colors"
                 >
-                  aerickidev@gmail.com
+                  aericki@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

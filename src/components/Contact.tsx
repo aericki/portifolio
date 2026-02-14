@@ -110,10 +110,10 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                     <div>
                       <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}>{t("contact.email")}</p>
                       <a 
-                        href="mailto:aerickidev@gmail.com" 
+                        href="mailto:aericki@gmail.com" 
                         className={`font-medium ${isDarkMode ? "text-white hover:text-red-500" : "text-gray-800 hover:text-red-600"} transition-colors`}
                       >
-                        aerickidev@gmail.com
+                        aericki@gmail.com
                       </a>
                     </div>
                   </div>

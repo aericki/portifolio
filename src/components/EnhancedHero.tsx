@@ -146,9 +146,8 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                 whileTap={{ scale: 0.95 }}
               >
                 <a
-                  href="https://docs.google.com/document/d/1JL35R5Zy3-iTUBGkvkGPMKPhthSUZ0zDrgPACsMPMVw/edit?usp=sharing"
-                  target="_blank"
-                  download
+                  href="https://docs.google.com/document/d/1JL35R5Zy3-iTUBGkvkGPMKPhthSUZ0zDrgPACsMPMVw/export?format=pdf"
+                  rel="noopener noreferrer"
                   className={`${isDarkMode ? "bg-red-600 hover:bg-red-700 text-white" : "bg-gray-700 hover:bg-gray-800 text-white"} px-6 py-3 rounded-full font-medium transition inline-flex items-center`}
                 >
                   <Download className="mr-2 h-4 w-4" />
