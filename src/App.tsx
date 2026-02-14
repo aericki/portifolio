@@ -25,8 +25,6 @@ function App() {
       document.documentElement.classList.remove("dark");
     }
 
-    
-
     const handleScroll = () => {
       const sections = [
         "sobre",
@@ -74,7 +72,7 @@ function App() {
     const upsertMetaTag = (
       attribute: "name" | "property",
       key: string,
-      content: string
+      content: string,
     ) => {
       let tag = document.querySelector(`meta[${attribute}="${key}"]`);
       if (!tag) {
@@ -107,8 +105,6 @@ function App() {
     upsertLinkTag("canonical", currentUrl);
   }, [t, i18n.language]);
 
-
-  
   const toggleDarkMode = () => {
     setIsDarkMode((prevMode) => {
       const newMode = !prevMode;
