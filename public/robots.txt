@@ -1,5 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
 
-Host: aericki.dev
+# Crawl-delay para bots menos conhecidos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
 Sitemap: https://aericki.dev/sitemap.xml

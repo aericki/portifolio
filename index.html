@@ -1,86 +1,185 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Aericki Ferreira - Analista e Desenvolvedor de Sistemas | Portfólio
-    </title>
+
+    <!-- ═══ Título & Descrição ═══ -->
+    <title>Aericki Ferreira — Desenvolvedor Full-Stack | Portfólio</title>
     <meta
       name="description"
-      content="Portfólio de Aericki Ferreira: desenvolvedor full-stack e fundador da Best Breakers, com projetos em React, TypeScript, Go, Node.js e sistemas em tempo real para o cenário esportivo do breaking."
+      content="Portfólio de Aericki Ferreira: desenvolvedor full-stack e fundador da Best Breakers. Projetos em React, TypeScript, Go, Node.js e sistemas em tempo real para o cenário esportivo do breaking."
     />
     <meta
       name="keywords"
-      content="Aericki Ferreira, desenvolvedor full-stack, portfólio, React, TypeScript, Go, Node.js, Best Breakers, sistema de julgamento eletrônico, breaking"
+      content="Aericki Ferreira, desenvolvedor full-stack, portfólio, React, TypeScript, Go, Node.js, Best Breakers, sistema de julgamento eletrônico, breaking, WebSocket, software developer, São Paulo"
     />
     <meta name="author" content="Aericki Ferreira" />
     <meta
       name="robots"
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
-    <meta name="theme-color" content="#111827" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="generator" content="Vite + React" />
 
+    <!-- ═══ Canonical & Hreflang ═══ -->
     <link rel="canonical" href="https://aericki.dev/" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="alternate" hreflang="pt" href="https://aericki.dev/" />
+    <link rel="alternate" hreflang="en" href="https://aericki.dev/" />
+    <link rel="alternate" hreflang="es" href="https://aericki.dev/" />
+    <link rel="alternate" hreflang="x-default" href="https://aericki.dev/" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Aericki Ferreira" />
+    <!-- ═══ Favicon & Icons ═══ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://github.com/aericki.png" />
+    <link rel="apple-touch-icon" href="https://github.com/aericki.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ═══ Preconnect (Performance) ═══ -->
+    <link rel="preconnect" href="https://github.com" crossorigin />
+    <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin />
+    <link rel="dns-prefetch" href="https://flagsapi.com" />
+    <link rel="dns-prefetch" href="https://wa.me" />
+
+    <!-- ═══ Open Graph ═══ -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Aericki Ferreira — Portfólio" />
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
     <meta property="og:url" content="https://aericki.dev/" />
-    <meta
-      property="og:title"
-      content="Aericki Ferreira - Analista e Desenvolvedor de Sistemas | Portfólio"
-    />
+    <meta property="og:title" content="Aericki Ferreira — Desenvolvedor Full-Stack | Portfólio" />
     <meta
       property="og:description"
-      content="Portfólio de Aericki Ferreira: desenvolvedor full-stack e fundador da Best Breakers, com projetos em React, TypeScript, Go, Node.js e sistemas em tempo real para o cenário esportivo do breaking."
+      content="Desenvolvedor full-stack e fundador da Best Breakers. Projetos em React, TypeScript, Go, Node.js e sistemas de julgamento em tempo real."
     />
-    <meta property="og:image" content="https://aericki.dev/og-image.svg" />
-    <meta property="og:image:type" content="image/svg+xml" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="https://github.com/aericki.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="460" />
+    <meta property="og:image:height" content="460" />
+    <meta property="og:image:alt" content="Aericki Ferreira — Desenvolvedor Full-Stack" />
+    <meta property="profile:first_name" content="Aericki" />
+    <meta property="profile:last_name" content="Ferreira" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Aericki Ferreira | Portfólio" />
+    <!-- ═══ Twitter Card ═══ -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Aericki Ferreira — Desenvolvedor Full-Stack" />
     <meta
       name="twitter:description"
       content="Desenvolvedor full-stack e fundador da Best Breakers. Projetos em React, TypeScript, Go e Node.js."
     />
-    <meta name="twitter:image" content="https://aericki.dev/og-image.svg" />
-    <meta name="twitter:image:alt" content="Portfólio de Aericki Ferreira" />
+    <meta name="twitter:image" content="https://github.com/aericki.png" />
+    <meta name="twitter:image:alt" content="Aericki Ferreira" />
 
+    <!-- ═══ Structured Data: Person ═══ -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://aericki.dev/#person",
         "name": "Aericki Ferreira",
+        "alternateName": "Aericki Trindade Araujo de Jesus Ferreira",
         "url": "https://aericki.dev/",
         "jobTitle": "Full-Stack Developer",
         "image": "https://github.com/aericki.png",
         "email": "mailto:aericki@gmail.com",
+        "telephone": "+5513991717187",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Peruíbe",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "UNISA"
+        },
         "sameAs": [
           "https://github.com/aericki",
-          "https://linkedin.com/in/aericki"
+          "https://linkedin.com/in/aericki",
+          "https://wa.me/5513991717187"
         ],
         "knowsAbout": [
-          "React",
-          "TypeScript",
-          "Go",
-          "Node.js",
-          "WebSocket",
-          "Tailwind CSS",
-          "SQLite"
+          "React", "TypeScript", "JavaScript", "Go", "Node.js",
+          "Python", "WebSocket", "Tailwind CSS", "SQLite", "PostgreSQL",
+          "MongoDB", "Docker", "REST API", "Git", "Linux"
         ],
+        "knowsLanguage": ["pt-BR", "en", "es"],
         "worksFor": {
           "@type": "Organization",
-          "name": "Best Breakers"
+          "name": "Best Breakers",
+          "url": "https://www.bestbreakers.com.br"
         }
+      }
+    </script>
+
+    <!-- ═══ Structured Data: WebSite ═══ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://aericki.dev/#website",
+        "url": "https://aericki.dev/",
+        "name": "Aericki Ferreira — Portfólio",
+        "description": "Portfólio profissional de Aericki Ferreira, desenvolvedor full-stack e fundador da Best Breakers.",
+        "inLanguage": ["pt-BR", "en", "es"],
+        "author": { "@id": "https://aericki.dev/#person" }
+      }
+    </script>
+
+    <!-- ═══ Structured Data: ProfilePage ═══ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": "https://aericki.dev/#profilepage",
+        "url": "https://aericki.dev/",
+        "name": "Aericki Ferreira — Portfólio",
+        "mainEntity": { "@id": "https://aericki.dev/#person" },
+        "dateCreated": "2024-01-01",
+        "dateModified": "2026-02-13",
+        "inLanguage": "pt-BR"
       }
     </script>
   </head>
   <body>
+    <!-- Skip to content (accessibility) -->
+    <a
+      href="#sobre"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-red-600 focus:text-white focus:rounded-md focus:outline-none"
+    >
+      Ir para o conteúdo principal
+    </a>
+
     <div id="root"></div>
+
+    <!-- ═══ Noscript fallback (SEO para crawlers) ═══ -->
+    <noscript>
+      <div style="max-width:800px;margin:0 auto;padding:40px 20px;font-family:system-ui,sans-serif;color:#e5e7eb;background:#111827;min-height:100vh">
+        <h1 style="font-size:2rem;margin-bottom:8px">Aericki Ferreira</h1>
+        <p style="color:#9ca3af;font-size:1.1rem;margin-bottom:24px">Desenvolvedor Full-Stack &bull; Fundador da Best Breakers</p>
+        <h2 style="font-size:1.3rem;margin-bottom:12px;color:#dc2626">Sobre</h2>
+        <p style="color:#d1d5db;line-height:1.6;margin-bottom:24px">Desenvolvedor full-stack e fundador da Best Breakers — sistema de julgamento eletrônico para batalhas de breaking utilizado em campeonatos oficiais em São Paulo e Mato Grosso. Formado em Análise e Desenvolvimento de Sistemas pela UNISA.</p>
+        <h2 style="font-size:1.3rem;margin-bottom:12px;color:#dc2626">Tecnologias</h2>
+        <p style="color:#d1d5db;margin-bottom:24px">React, TypeScript, Go, Node.js, Python, WebSocket, Tailwind CSS, SQLite, PostgreSQL, MongoDB, Docker, Git, Linux</p>
+        <h2 style="font-size:1.3rem;margin-bottom:12px;color:#dc2626">Projetos</h2>
+        <ul style="color:#d1d5db;line-height:1.8;padding-left:20px;margin-bottom:24px">
+          <li><a href="https://www.bestbreakers.com.br" style="color:#60a5fa">Best Breakers — Sistema de Julgamento Eletrônico</a> (10 campeonatos, 196 atletas)</li>
+          <li><a href="https://www.bestbreakers.com.br" style="color:#60a5fa">Best Breakers — Ranking Oficial</a></li>
+          <li><a href="https://cliente-estela-lp.vercel.app/" style="color:#60a5fa">Estela Logística — Landing Page</a></li>
+          <li><a href="https://beta-breakinglocations.netlify.app" style="color:#60a5fa">Breaking Locations</a></li>
+        </ul>
+        <h2 style="font-size:1.3rem;margin-bottom:12px;color:#dc2626">Contato</h2>
+        <p style="color:#d1d5db">Email: <a href="mailto:aericki@gmail.com" style="color:#60a5fa">aericki@gmail.com</a></p>
+        <p style="color:#d1d5db">GitHub: <a href="https://github.com/aericki" style="color:#60a5fa">github.com/aericki</a></p>
+        <p style="color:#d1d5db">LinkedIn: <a href="https://linkedin.com/in/aericki" style="color:#60a5fa">linkedin.com/in/aericki</a></p>
+        <p style="color:#d1d5db">WhatsApp: <a href="https://wa.me/5513991717187" style="color:#60a5fa">+55 13 99171-7187</a></p>
+      </div>
+    </noscript>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

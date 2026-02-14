@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import {
   Download,
-  ExternalLink,
   Github,
+  Linkedin,
   Mail,
   ChevronDown,
 } from "lucide-react";
@@ -86,11 +86,14 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
             <div className="w-32 h-32 rounded-full overflow-hidden relative">
               <img
                 src="https://github.com/aericki.png"
-                alt="Aericki Ferreira"
+                alt="Foto de Aericki Ferreira — Desenvolvedor Full-Stack"
                 className="w-full h-full object-cover"
+                width={128}
+                height={128}
+                fetchPriority="high"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
-                  target.src = "https://via.placeholder.com/128?text=Foto";
+                  target.style.display = "none";
                 }}
               />
             </div>
@@ -174,6 +177,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                 href="https://github.com/aericki"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub de Aericki Ferreira"
                 whileHover={{ y: -5 }}
                 className={`p-2 rounded-full ${isDarkMode ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-gray-200 text-gray-700 hover:bg-gray-300"} transition-colors`}
               >
@@ -184,10 +188,11 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
                 href="https://linkedin.com/in/aericki"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn de Aericki Ferreira"
                 whileHover={{ y: -5 }}
                 className={`p-2 rounded-full ${isDarkMode ? "bg-gray-800 text-white hover:bg-gray-700" : "bg-gray-200 text-gray-700 hover:bg-gray-300"} transition-colors`}
               >
-                <ExternalLink size={20} />
+                <Linkedin size={20} />
               </motion.a>
             </div>
           </motion.div>

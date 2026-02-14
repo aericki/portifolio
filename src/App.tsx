@@ -60,14 +60,20 @@ function App() {
       es: "es_ES",
     };
 
+    const langCodeMap: Record<string, string> = {
+      pt: "pt-BR",
+      en: "en",
+      es: "es",
+    };
+
     const pageTitle = t("page_title");
     const pageDescription = t("seo_description");
     const pageKeywords = t("seo_keywords");
-    const currentUrl = `${window.location.origin}${window.location.pathname}`;
+    const currentUrl = "https://aericki.dev/";
     const currentLocale = seoLocaleMap[i18n.language] ?? "pt_BR";
 
-    document.title = t("page_title");
-    document.documentElement.lang = i18n.language;
+    document.title = pageTitle;
+    document.documentElement.lang = langCodeMap[i18n.language] ?? "pt-BR";
 
     const upsertMetaTag = (
       attribute: "name" | "property",
@@ -83,25 +89,37 @@ function App() {
       tag.setAttribute("content", content);
     };
 
-    const upsertLinkTag = (rel: string, href: string) => {
-      let linkTag = document.querySelector(`link[rel="${rel}"]`);
+    const upsertLinkTag = (rel: string, href: string, extra?: Record<string, string>) => {
+      const selector = extra
+        ? `link[rel="${rel}"][hreflang="${extra.hreflang}"]`
+        : `link[rel="${rel}"]`;
+      let linkTag = document.querySelector(selector);
       if (!linkTag) {
         linkTag = document.createElement("link");
         linkTag.setAttribute("rel", rel);
+        if (extra) {
+          Object.entries(extra).forEach(([k, v]) => linkTag!.setAttribute(k, v));
+        }
         document.head.appendChild(linkTag);
       }
       linkTag.setAttribute("href", href);
     };
 
+    // Core meta
     upsertMetaTag("name", "description", pageDescription);
     upsertMetaTag("name", "keywords", pageKeywords);
+
+    // Open Graph
     upsertMetaTag("property", "og:title", pageTitle);
     upsertMetaTag("property", "og:description", pageDescription);
     upsertMetaTag("property", "og:url", currentUrl);
     upsertMetaTag("property", "og:locale", currentLocale);
+
+    // Twitter
     upsertMetaTag("name", "twitter:title", pageTitle);
     upsertMetaTag("name", "twitter:description", pageDescription);
 
+    // Canonical
     upsertLinkTag("canonical", currentUrl);
   }, [t, i18n.language]);
 
