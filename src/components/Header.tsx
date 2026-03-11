@@ -102,6 +102,7 @@ const Header: React.FC<HeaderProps> = ({
 
   const navTextClass = isDarkMode ? "text-zinc-300" : "text-stone-600";
   const activeTextClass = isDarkMode ? "text-white" : "text-stone-950";
+  const isSpanish = i18n.language.startsWith("es");
 
   return (
     <header className="fixed inset-x-0 top-2 z-40 px-2 sm:top-3 sm:px-4">
@@ -154,7 +155,11 @@ const Header: React.FC<HeaderProps> = ({
         </motion.h1>
 
         <nav className="hidden md:block pl-3">
-          <ul className="flex items-center gap-2 rounded-full border border-white/5 px-2 py-2">
+          <ul
+            className={`flex items-center rounded-full border border-white/5 py-2 ${
+              isSpanish ? "gap-1.5 px-1.5 xl:gap-2 xl:px-2" : "gap-2 px-2"
+            }`}
+          >
             {navItems.map((item) => (
               <motion.li
                 key={item.id}
@@ -167,7 +172,11 @@ const Header: React.FC<HeaderProps> = ({
               >
                 <a
                   href={`#${item.id}`}
-                  className={`relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`relative flex items-center rounded-full py-2 font-medium transition-colors ${
+                    isSpanish
+                      ? "gap-1.5 px-2.5 text-[13px] xl:gap-2 xl:px-3 xl:text-sm"
+                      : "gap-2 px-4 text-sm"
+                  } ${
                     activeSection === item.id ? activeTextClass : navTextClass
                   }`}
                 >
@@ -203,7 +212,7 @@ const Header: React.FC<HeaderProps> = ({
         </nav>
 
         <div className="ml-2 flex shrink-0 items-center gap-1.5 sm:gap-3">
-          <div className="relative group">
+          <div className="relative hidden md:block group">
             <button
               className={`flex items-center gap-1 rounded-full border px-2.5 py-2 text-sm font-medium sm:gap-2 sm:px-3 ${
                 isDarkMode
@@ -254,7 +263,13 @@ const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
 
-          <ThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleDarkMode} />
+          <div className="hidden md:block">
+            <ThemeToggle
+              isDarkMode={isDarkMode}
+              toggleTheme={toggleDarkMode}
+              compact={isSpanish}
+            />
+          </div>
 
           <motion.button
             initial={{ opacity: 0 }}
@@ -347,7 +362,13 @@ const Header: React.FC<HeaderProps> = ({
                   </a>
                 </motion.li>
               ))}
-              <div className="mt-2 flex items-center justify-between rounded-2xl border border-white/8 px-4 py-3">
+              <div
+                className={`mt-2 flex items-center justify-between rounded-2xl border px-4 py-3 ${
+                  isDarkMode
+                    ? "border-white/8"
+                    : "border-stone-200 bg-stone-50/80"
+                }`}
+              >
                 <span
                   className={
                     isDarkMode
@@ -381,6 +402,28 @@ const Header: React.FC<HeaderProps> = ({
                     </button>
                   ))}
                 </div>
+              </div>
+
+              <div
+                className={`flex items-center justify-between rounded-2xl border px-4 py-3 ${
+                  isDarkMode
+                    ? "border-white/8"
+                    : "border-stone-200 bg-stone-50/80"
+                }`}
+              >
+                <span
+                  className={
+                    isDarkMode
+                      ? "text-sm text-zinc-400"
+                      : "text-sm text-stone-500"
+                  }
+                >
+                  Tema
+                </span>
+                <ThemeToggle
+                  isDarkMode={isDarkMode}
+                  toggleTheme={toggleDarkMode}
+                />
               </div>
             </motion.ul>
           </>

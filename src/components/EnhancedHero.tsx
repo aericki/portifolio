@@ -69,7 +69,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({ isDarkMode }) => {
   const copy = localeCopy[locale];
 
   return (
-    <section className="relative flex items-center overflow-hidden pb-30 sm:pb-42 lg:min-h-screen ">
+    <section className="relative flex items-center   md:pt-15 overflow-hidden pb-30 sm:pb-42 lg:min-h-screen ">
       <div
         className={`hero-mesh pointer-events-none ${
           isDarkMode ? "opacity-60" : "hero-mesh-light opacity-70"
