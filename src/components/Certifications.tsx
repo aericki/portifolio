@@ -31,18 +31,21 @@ const Certifications: React.FC<CertificationsProps> = ({ isDarkMode }) => {
   ];
 
   return (
-    <section id="certificacoes" className={`py-5 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}>
-      <div className="container px-4 mx-auto">
+    <section id="certificacoes" className="py-18 sm:py-24">
+      <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className={`text-2xl sm:text-3xl font-bold mb-12 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}>
+          <h2
+            className={`mb-12 text-3xl font-bold tracking-[-0.04em] sm:text-4xl ${isDarkMode ? "text-white" : "text-stone-950"}`}
+          >
             {t("certifications.title")}
           </h2>
-          <div className="max-w-3xl mx-auto space-y-6">
+
+          <div className="grid gap-5 md:grid-cols-3">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
@@ -51,16 +54,42 @@ const Certifications: React.FC<CertificationsProps> = ({ isDarkMode }) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-md p-6`}>
-                  <div className="flex items-start gap-4">
-                    <BadgeCheck className={`w-6 h-6 ${isDarkMode ? "text-red-600" : "text-gray-600"} mt-1`} />
-                    <div>
-                      <h3 className={`text-xl font-semibold ${isDarkMode ? "text-white" : "text-gray-800"}`}>{cert.title}</h3>
-                      <p className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"} mb-2`}>
-                        {cert.provider} | {cert.year}
-                      </p>
-                      <p className={`${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>{cert.description}</p>
+                <div
+                  className={`h-full rounded-[1.75rem] p-6 sm:p-7 ${isDarkMode ? "glass-panel" : "glass-panel-light"}`}
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={`flex h-11 w-11 items-center justify-center rounded-2xl ${isDarkMode ? "bg-red-500/12 text-red-300" : "bg-red-50 text-red-700"}`}
+                      >
+                        <BadgeCheck className="h-5 w-5" />
+                      </div>
+                      <span
+                        className={
+                          isDarkMode
+                            ? "text-xs uppercase tracking-[0.28em] text-zinc-500"
+                            : "text-xs uppercase tracking-[0.28em] text-stone-500"
+                        }
+                      >
+                        {cert.year}
+                      </span>
                     </div>
+
+                    <h3
+                      className={`mt-6 text-xl font-semibold ${isDarkMode ? "text-white" : "text-stone-950"}`}
+                    >
+                      {cert.title}
+                    </h3>
+                    <p
+                      className={`mt-2 text-sm ${isDarkMode ? "text-red-300" : "text-red-700"}`}
+                    >
+                      {cert.provider}
+                    </p>
+                    <p
+                      className={`mt-5 text-base leading-8 ${isDarkMode ? "text-zinc-300" : "text-stone-600"}`}
+                    >
+                      {cert.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>

@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Desenvolvedor full-stack e fundador da Best Breakers — sistema de julgamento eletrônico para batalhas de breaking utilizado em campeonatos oficiais em São Paulo e Mato Grosso. Idealizo, projeto e desenvolvo soluções completas: do backend em Go e Node.js ao frontend em React com TypeScript, passando por votação em tempo real via WebSocket e gestão de campeonatos. Formado em Análise e Desenvolvimento de Sistemas, busco constantemente unir tecnologia e impacto real no esporte."
+    "description": "Sou desenvolvedor full-stack e fundador da Best Breakers. Projeto e construo produtos digitais completos, unindo backend em Go e Node.js, frontend em React com TypeScript e experiências orientadas a performance, clareza e resultado. Minha especialidade é transformar ideias em soluções reais, com visão de produto, execução técnica sólida e impacto concreto no cenário do breaking."
   },
   "experience": {
     "title": "Experiência",

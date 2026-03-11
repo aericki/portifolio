@@ -88,11 +88,8 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
   };
 
   return (
-    <section
-      id="contato"
-      className={`py-20 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}
-    >
-      <div className="container px-4 mx-auto">
+    <section id="contato" className="py-20 sm:py-24">
+      <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -100,25 +97,24 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
         >
           <h2
-            className={`text-2xl sm:text-3xl font-bold mb-6 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}
+            className={`mb-6 text-3xl font-bold tracking-[-0.04em] sm:text-4xl ${isDarkMode ? "text-white" : "text-stone-950"}`}
           >
             {t("contact.title")}
           </h2>
 
           <p
-            className={`text-center max-w-2xl mx-auto mb-12 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
+            className={`mb-12 max-w-2xl text-base leading-8 ${isDarkMode ? "text-zinc-400" : "text-stone-600"}`}
           >
             {t("contact.intro_message")}
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Informações de Contato */}
             <div className="space-y-8">
               <div
-                className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg p-8`}
+                className={`rounded-[2rem] p-8 ${isDarkMode ? "glass-panel" : "glass-panel-light"}`}
               >
                 <h3
-                  className={`text-xl font-semibold mb-6 ${isDarkMode ? "text-white" : "text-gray-800"}`}
+                  className={`mb-6 text-xl font-semibold ${isDarkMode ? "text-white" : "text-stone-950"}`}
                 >
                   {t("contact.contact_info_title")}
                 </h3>
@@ -126,21 +122,21 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 rounded-full ${isDarkMode ? "bg-red-600/20" : "bg-gray-200"}`}
+                      className={`rounded-2xl p-3 ${isDarkMode ? "bg-red-500/12" : "bg-red-50"}`}
                     >
                       <Mail
-                        className={`w-5 h-5 ${isDarkMode ? "text-red-600" : "text-gray-700"}`}
+                        className={`h-5 w-5 ${isDarkMode ? "text-red-300" : "text-red-700"}`}
                       />
                     </div>
                     <div>
                       <p
-                        className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
+                        className={`text-sm ${isDarkMode ? "text-zinc-500" : "text-stone-500"}`}
                       >
                         {t("contact.email")}
                       </p>
                       <a
                         href="mailto:aericki@gmail.com"
-                        className={`font-medium ${isDarkMode ? "text-white hover:text-red-500" : "text-gray-800 hover:text-red-600"} transition-colors`}
+                        className={`font-medium ${isDarkMode ? "text-white hover:text-red-300" : "text-stone-900 hover:text-red-700"} transition-colors`}
                       >
                         aericki@gmail.com
                       </a>
@@ -149,21 +145,21 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
 
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 rounded-full ${isDarkMode ? "bg-red-600/20" : "bg-gray-200"}`}
+                      className={`rounded-2xl p-3 ${isDarkMode ? "bg-red-500/12" : "bg-red-50"}`}
                     >
                       <BsWhatsapp
-                        className={`w-5 h-5 ${isDarkMode ? "text-red-600" : "text-gray-700"}`}
+                        className={`h-5 w-5 ${isDarkMode ? "text-red-300" : "text-red-700"}`}
                       />
                     </div>
                     <div>
                       <p
-                        className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
+                        className={`text-sm ${isDarkMode ? "text-zinc-500" : "text-stone-500"}`}
                       >
                         {t("contact.phone_whatsapp")}
                       </p>
                       <a
                         href="https://wa.me/+5513991717187"
-                        className={`font-medium ${isDarkMode ? "text-white hover:text-red-500" : "text-gray-800 hover:text-red-600"} transition-colors`}
+                        className={`font-medium ${isDarkMode ? "text-white hover:text-red-300" : "text-stone-900 hover:text-red-700"} transition-colors`}
                       >
                         +55 13 99171-7187
                       </a>
@@ -172,20 +168,20 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
 
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 rounded-full ${isDarkMode ? "bg-red-600/20" : "bg-gray-200"}`}
+                      className={`rounded-2xl p-3 ${isDarkMode ? "bg-red-500/12" : "bg-red-50"}`}
                     >
                       <MapPin
-                        className={`w-5 h-5 ${isDarkMode ? "text-red-600" : "text-gray-700"}`}
+                        className={`h-5 w-5 ${isDarkMode ? "text-red-300" : "text-red-700"}`}
                       />
                     </div>
                     <div>
                       <p
-                        className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
+                        className={`text-sm ${isDarkMode ? "text-zinc-500" : "text-stone-500"}`}
                       >
                         {t("contact.location")}
                       </p>
                       <p
-                        className={`font-medium ${isDarkMode ? "text-white" : "text-gray-800"}`}
+                        className={`font-medium ${isDarkMode ? "text-white" : "text-stone-900"}`}
                       >
                         Peruíbe, SP - Brasil
                       </p>
@@ -194,26 +190,15 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                 </div>
               </div>
 
-              {/*<motion.a
-                href="/Aericki_Trindade_CV.pdf"
-                download
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className={`${isDarkMode ? "bg-red-600 hover:bg-red-700" : "bg-gray-700 hover:bg-gray-800"} text-white p-4 rounded-lg font-semibold transition flex items-center justify-center`}
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Baixar Currículo
-              </motion.a>*/}
-
               <div className="flex justify-center space-x-4">
                 <a
                   href="https://github.com/aericki"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-3 rounded-full ${
+                  className={`rounded-full border p-3 ${
                     isDarkMode
-                      ? "bg-gray-800 hover:bg-gray-700 text-white"
-                      : "bg-white hover:bg-gray-100 text-gray-700"
+                      ? "border-white/10 bg-white/4 text-white hover:bg-white/8"
+                      : "border-stone-200 bg-white text-stone-700 hover:bg-stone-100"
                   } transition-colors shadow-md`}
                   aria-label="GitHub"
                 >
@@ -224,10 +209,10 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                   href="https://linkedin.com/in/aericki" // Atualize com seu perfil do LinkedIn
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-3 rounded-full ${
+                  className={`rounded-full border p-3 ${
                     isDarkMode
-                      ? "bg-gray-800 hover:bg-gray-700 text-white"
-                      : "bg-white hover:bg-gray-100 text-gray-700"
+                      ? "border-white/10 bg-white/4 text-white hover:bg-white/8"
+                      : "border-stone-200 bg-white text-stone-700 hover:bg-stone-100"
                   } transition-colors shadow-md`}
                   aria-label="LinkedIn"
                 >
@@ -243,17 +228,15 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
               </div>
             </div>
 
-            {/* Formulário de Contato */}
             <div
-              className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-lg p-8`}
+              className={`rounded-[2rem] p-8 ${isDarkMode ? "glass-panel" : "glass-panel-light"}`}
             >
               <h3
-                className={`text-xl font-semibold mb-6 ${isDarkMode ? "text-white" : "text-gray-800"}`}
+                className={`mb-6 text-xl font-semibold ${isDarkMode ? "text-white" : "text-stone-950"}`}
               >
                 {t("contact.send_message_title")}
               </h3>
 
-              {/* Mensagens de status */}
               {formStatus === "success" && (
                 <div
                   className={`mb-6 p-4 rounded-md ${
@@ -297,106 +280,101 @@ const Contact: React.FC<ContactProps> = ({ isDarkMode }) => {
                   <label
                     htmlFor="from_name"
                     className={`block text-sm font-medium mb-1 ${
-                      isDarkMode ? "text-gray-300" : "text-gray-700"
+                      isDarkMode ? "text-zinc-300" : "text-stone-700"
                     }`}
                   >
                     {t("contact.name_label")}
                   </label>
-                  <input
-                    id="from_name"
-                    name="from_name"
-                    type="text"
-                    value={formData.from_name}
-                    onChange={handleChange}
-                    required
-                    className={`w-full p-3 rounded-md ${
-                      isDarkMode
-                        ? "bg-gray-700 text-white border-gray-600 focus:border-red-500"
-                        : "bg-gray-50 text-gray-900 border-gray-300 focus:border-red-600"
-                    } border focus:outline-none focus:ring-1 focus:ring-opacity-50 ${
-                      isDarkMode ? "focus:ring-red-500" : "focus:ring-red-600"
-                    } transition-colors`}
-                    placeholder={t("contact.name_placeholder")}
-                    disabled={formStatus === "sending"}
-                  />
+                  <div
+                    className={`input-shell ${!isDarkMode ? "border-stone-200 bg-stone-50" : ""}`}
+                  >
+                    <input
+                      id="from_name"
+                      name="from_name"
+                      type="text"
+                      value={formData.from_name}
+                      onChange={handleChange}
+                      required
+                      className={`w-full bg-transparent px-4 py-3 text-sm focus:outline-none ${
+                        isDarkMode ? "text-white" : "text-stone-900"
+                      }`}
+                      placeholder={t("contact.name_placeholder")}
+                      disabled={formStatus === "sending"}
+                    />
+                  </div>
                 </div>
 
                 <div>
                   <label
                     htmlFor="from_email"
                     className={`block text-sm font-medium mb-1 ${
-                      isDarkMode ? "text-gray-300" : "text-gray-700"
+                      isDarkMode ? "text-zinc-300" : "text-stone-700"
                     }`}
                   >
                     {t("contact.email_label")}
                   </label>
-                  <input
-                    id="from_email"
-                    name="from_email"
-                    type="email"
-                    value={formData.from_email}
-                    onChange={handleChange}
-                    required
-                    className={`w-full p-3 rounded-md ${
-                      isDarkMode
-                        ? "bg-gray-700 text-white border-gray-600 focus:border-red-500"
-                        : "bg-gray-50 text-gray-900 border-gray-300 focus:border-red-600"
-                    } border focus:outline-none focus:ring-1 focus:ring-opacity-50 ${
-                      isDarkMode ? "focus:ring-red-500" : "focus:ring-red-600"
-                    } transition-colors`}
-                    placeholder={t("contact.email_placeholder")}
-                    disabled={formStatus === "sending"}
-                  />
+                  <div
+                    className={`input-shell ${!isDarkMode ? "border-stone-200 bg-stone-50" : ""}`}
+                  >
+                    <input
+                      id="from_email"
+                      name="from_email"
+                      type="email"
+                      value={formData.from_email}
+                      onChange={handleChange}
+                      required
+                      className={`w-full bg-transparent px-4 py-3 text-sm focus:outline-none ${
+                        isDarkMode ? "text-white" : "text-stone-900"
+                      }`}
+                      placeholder={t("contact.email_placeholder")}
+                      disabled={formStatus === "sending"}
+                    />
+                  </div>
                 </div>
 
-                {/* Campo oculto para o destinatário */}
                 <input type="hidden" name="to_name" value="Aericki" />
 
                 <div>
                   <label
                     htmlFor="message"
                     className={`block text-sm font-medium mb-1 ${
-                      isDarkMode ? "text-gray-300" : "text-gray-700"
+                      isDarkMode ? "text-zinc-300" : "text-stone-700"
                     }`}
                   >
                     {t("contact.message_label")}
                   </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className={`w-full p-3 rounded-md ${
-                      isDarkMode
-                        ? "bg-gray-700 text-white border-gray-600 focus:border-red-500"
-                        : "bg-gray-50 text-gray-900 border-gray-300 focus:border-red-600"
-                    } border focus:outline-none focus:ring-1 focus:ring-opacity-50 ${
-                      isDarkMode ? "focus:ring-red-500" : "focus:ring-red-600"
-                    } transition-colors resize-none`}
-                    placeholder={t("contact.message_placeholder")}
-                    disabled={formStatus === "sending"}
-                  />
+                  <div
+                    className={`input-shell ${!isDarkMode ? "border-stone-200 bg-stone-50" : ""}`}
+                  >
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={5}
+                      className={`w-full resize-none bg-transparent px-4 py-3 text-sm focus:outline-none ${
+                        isDarkMode ? "text-white" : "text-stone-900"
+                      }`}
+                      placeholder={t("contact.message_placeholder")}
+                      disabled={formStatus === "sending"}
+                    />
+                  </div>
                 </div>
 
                 <button
                   type="submit"
                   disabled={formStatus === "sending"}
-                  className={`w-full mt-2 p-3 rounded-md font-medium flex items-center justify-center ${
-                    isDarkMode
-                      ? "bg-red-600 hover:bg-red-700 text-white"
-                      : "bg-gray-700 hover:bg-gray-800 text-white"
-                  } transition-colors ${formStatus === "sending" ? "opacity-70 cursor-not-allowed" : ""}`}
+                  className={`button-primary mt-2 flex w-full items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold ${formStatus === "sending" ? "cursor-not-allowed opacity-70" : ""}`}
                 >
                   {formStatus === "sending" ? (
                     <>
-                      <Loader className="animate-spin mr-2 h-5 w-5" />
+                      <Loader className="h-5 w-5 animate-spin" />
                       {t("contact.sending_button")}
                     </>
                   ) : (
                     <>
-                      <Send className="mr-2 h-5 w-5" />
+                      <Send className="h-5 w-5" />
                       {t("contact.send_button")}
                     </>
                   )}

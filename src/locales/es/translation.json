@@ -16,7 +16,7 @@
   },
   "about": {
     "title": "Sobre Mí",
-    "description": "Desarrollador full-stack y fundador de Best Breakers — sistema de juicio electrónico para batallas de breaking utilizado en campeonatos oficiales en São Paulo y Mato Grosso, Brasil. Diseño, proyecto y desarrollo soluciones completas: del backend en Go y Node.js al frontend en React con TypeScript, incluyendo votación en tiempo real vía WebSocket y gestión de campeonatos. Graduado en Análisis y Desarrollo de Sistemas, busco constantemente unir tecnología e impacto real en el deporte."
+    "description": "Soy desarrollador full-stack y fundador de Best Breakers. Diseño y construyo productos digitales completos, combinando backend en Go y Node.js, frontend en React con TypeScript y experiencias enfocadas en rendimiento, claridad y resultados reales. Mi fortaleza es transformar ideas en soluciones concretas, con visión de producto, ejecución técnica sólida e impacto en la escena del breaking."
   },
   "experience": {
     "title": "Experiencia",

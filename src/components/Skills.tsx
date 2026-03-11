@@ -43,17 +43,16 @@ const skills = [
 const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
   const { t } = useTranslation();
   return (
-    <section
-      id="habilidades"
-      className={`py-8 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}
-    >
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="habilidades" className="py-18 sm:py-24">
+      <div className="section-shell">
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className={`text-2xl sm:text-3xl font-bold mb-12 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}
+          className={`mb-5 text-3xl font-bold tracking-[-0.04em] sm:text-4xl ${
+            isDarkMode ? "text-white" : "text-stone-950"
+          }`}
         >
           {t("skills.title")}
         </motion.h3>
@@ -62,11 +61,14 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`max-w-3xl mx-auto mb-12 text-left ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}
+          className={`mb-12 max-w-3xl text-left text-base leading-8 ${
+            isDarkMode ? "text-zinc-300" : "text-stone-600"
+          }`}
         >
           {t("skills.description")}
         </motion.p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
@@ -78,24 +80,36 @@ const Skills: React.FC<SkillsProps> = ({ isDarkMode }) => {
                 scale: 1.05,
                 transition: { type: "spring", stiffness: 300 },
               }}
-              className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-md transition-all hover:shadow-lg hover:border-red-600/50`}
+              className={`group rounded-[1.5rem] border p-[1px] ${
+                isDarkMode
+                  ? "border-white/10 bg-white/4 hover:border-red-500/30"
+                  : "border-stone-200 bg-white hover:border-red-200 hover:shadow-lg"
+              }`}
             >
-              <div className="p-6 flex flex-col items-center justify-center text-center">
+              <div
+                className={`h-full rounded-[1.45rem] p-6 text-center ${
+                  isDarkMode ? "bg-zinc-950/70" : "bg-white"
+                }`}
+              >
                 <motion.div
                   whileHover={{
                     rotate: 360,
                     transition: { duration: 0.6 },
                   }}
+                  className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/8 bg-white/4"
                 >
-                  <skill.icon
-                    className={`w-10 sm:w-12 h-10 sm:h-12 ${skill.color} mb-4`}
-                  />
+                  <skill.icon className={`h-8 w-8 ${skill.color}`} />
                 </motion.div>
                 <h4
-                  className={`font-semibold text-sm sm:text-base ${isDarkMode ? "text-white" : "text-gray-800"}`}
+                  className={`text-sm font-semibold sm:text-base ${
+                    isDarkMode ? "text-white" : "text-stone-900"
+                  }`}
                 >
                   {skill.name}
                 </h4>
+                <div
+                  className={`mx-auto mt-4 h-px w-10 transition-all duration-300 group-hover:w-16 ${isDarkMode ? "bg-red-500/60" : "bg-red-400/60"}`}
+                />
               </div>
             </motion.div>
           ))}

@@ -6,32 +6,43 @@ interface ThemeToggleProps {
   toggleTheme: () => void;
 }
 
-const ThemeToggle: React.FC<ThemeToggleProps> = ({ isDarkMode, toggleTheme }) => {
+const ThemeToggle: React.FC<ThemeToggleProps> = ({
+  isDarkMode,
+  toggleTheme,
+}) => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className={`relative p-1 rounded-full ${
-        isDarkMode ? "bg-gray-800" : "bg-gray-200"
+      className={`relative h-10 w-[4.5rem] rounded-full border px-1 sm:h-11 sm:w-20 ${
+        isDarkMode
+          ? "border-white/10 bg-white/5 text-white"
+          : "border-stone-300 bg-white text-stone-700 shadow-sm"
       } transition-colors duration-300 ease-in-out`}
       whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.02 }}
       aria-label="Toggle theme"
     >
-      <div className="relative w-10 h-5">
+      <div className="relative h-full w-full">
         <motion.div
           initial={false}
-          animate={{ x: isDarkMode ? 20 : 0 }}
+          animate={{ x: isDarkMode ? 28 : 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className={`absolute top-0 left-0 w-5 h-5 rounded-full 
+          className={`absolute left-0 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full sm:h-9 sm:w-9 ${
+            isDarkMode
+              ? "bg-gradient-to-br from-red-500 to-red-700 shadow-lg shadow-red-950/50"
+              : "bg-stone-900 shadow-lg shadow-stone-400/40"
           }`}
         />
         <Sun
-          className={`absolute left-0 top-0 h-5 w-5 transition-opacity ${
-            isDarkMode ? "opacity-0" : "opacity-100 text-gray-600"
+          className={`absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transition-opacity sm:h-5 sm:w-5 ${
+            isDarkMode
+              ? "opacity-40 text-zinc-500"
+              : "opacity-100 text-amber-500"
           }`}
         />
         <Moon
-          className={`absolute right-0 top-0 h-5 w-5 transition-opacity ${
-            isDarkMode ? "opacity-100 text-white" : "opacity-0"
+          className={`absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2 transition-opacity sm:h-5 sm:w-5 ${
+            isDarkMode ? "opacity-100 text-white" : "opacity-40 text-stone-400"
           }`}
         />
       </div>

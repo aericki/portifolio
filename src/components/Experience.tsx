@@ -69,11 +69,8 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
   ];
 
   return (
-    <section
-      id="experiencia"
-      className={`py-10 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-100"}`}
-    >
-      <div className="container px-4 mx-auto">
+    <section id="experiencia" className="py-18 sm:py-24">
+      <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,11 +78,14 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
         >
           <h2
-            className={`text-2xl sm:text-3xl font-bold mb-12 text-center ${isDarkMode ? "text-red-600" : "text-gray-800"}`}
+            className={`mb-14 text-3xl font-bold tracking-[-0.04em] sm:text-4xl ${
+              isDarkMode ? "text-white" : "text-stone-950"
+            }`}
           >
             {t("experience.title")}
           </h2>
-          <div className="max-w-3xl mx-auto space-y-6">
+
+          <div className="relative mx-auto max-w-5xl space-y-6 before:absolute before:bottom-0 before:left-4 before:top-0 before:w-px before:bg-gradient-to-b before:from-red-500/0 before:via-red-500/50 before:to-red-500/0 sm:before:left-7">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -93,42 +93,62 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative pl-12 sm:pl-20"
               >
                 <div
-                  className={`${isDarkMode ? "bg-gray-800" : "bg-white"} rounded-lg shadow-md p-6`}
+                  className={`absolute left-0 top-7 flex h-8 w-8 items-center justify-center rounded-full border sm:left-[13px] ${
+                    isDarkMode
+                      ? "border-red-500/30 bg-red-500/12 text-red-300"
+                      : "border-red-200 bg-red-50 text-red-700"
+                  }`}
                 >
-                  <div className="flex items-start gap-4">
-                    <BadgeCheck
-                      className={`w-6 h-6 ${isDarkMode ? "text-red-600" : "text-gray-600"} mt-1`}
-                    />
-                    <div>
+                  <BadgeCheck className="h-4 w-4" />
+                </div>
+
+                <div
+                  className={`rounded-[1.75rem] p-6 sm:p-8 ${isDarkMode ? "glass-panel" : "glass-panel-light"}`}
+                >
+                  <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+                    <div className="max-w-2xl">
+                      <p
+                        className={
+                          isDarkMode
+                            ? "text-xs uppercase tracking-[0.26em] text-zinc-500"
+                            : "text-xs uppercase tracking-[0.26em] text-stone-500"
+                        }
+                      >
+                        {exp.company}
+                      </p>
                       <h3
-                        className={`text-xl font-semibold ${isDarkMode ? "text-white" : "text-gray-800"}`}
+                        className={`mt-3 text-xl font-semibold sm:text-2xl ${isDarkMode ? "text-white" : "text-stone-950"}`}
                       >
                         {exp.title}
                       </h3>
                       <p
-                        className={`text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"} mb-2`}
+                        className={`mt-2 text-sm ${isDarkMode ? "text-red-300" : "text-red-700"}`}
                       >
-                        {exp.company} | {exp.period}
+                        {exp.period}
                       </p>
                       <p
-                        className={`${isDarkMode ? "text-gray-300" : "text-gray-700"} mb-4`}
+                        className={`mt-5 text-base leading-8 ${isDarkMode ? "text-zinc-300" : "text-stone-600"}`}
                       >
                         {exp.description}
                       </p>
-                      {exp.technologies.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
-                          {exp.technologies.map((tech, techIndex) => (
-                            <span
-                              key={`${tech}-${techIndex}`}
-                              className={`${isDarkMode ? "bg-red-600/45 text-white" : "bg-gray-600/10 text-gray-600"} text-sm px-2 py-1 rounded`}
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      )}
+                    </div>
+
+                    <div className="flex max-w-sm flex-wrap gap-2">
+                      {exp.technologies.map((tech, techIndex) => (
+                        <span
+                          key={`${tech}-${techIndex}`}
+                          className={`rounded-full border px-3 py-1.5 text-xs font-medium ${
+                            isDarkMode
+                              ? "border-red-500/18 bg-red-500/10 text-red-100"
+                              : "border-stone-200 bg-stone-100 text-stone-700"
+                          }`}
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>

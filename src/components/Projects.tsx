@@ -66,17 +66,35 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   };
 
   const bestBreakersImages = [
-    { src: cuiaba1, alt: "Best Breakers — Briefing com jurados no estádio em Cuiabá" },
-    { src: cuiaba2, alt: "Best Breakers — Jurados utilizando tablets para votação" },
-    { src: cobexpo1, alt: "Best Breakers — Jurados votando durante batalha na COBEXPO" },
+    {
+      src: cuiaba1,
+      alt: "Best Breakers — Briefing com jurados no estádio em Cuiabá",
+    },
+    {
+      src: cuiaba2,
+      alt: "Best Breakers — Jurados utilizando tablets para votação",
+    },
+    {
+      src: cobexpo1,
+      alt: "Best Breakers — Jurados votando durante batalha na COBEXPO",
+    },
     { src: cobexpo2, alt: "Best Breakers — Sistema de julgamento em ação" },
     { src: cuiaba3, alt: "Best Breakers — Campeonato de breaking em Cuiabá" },
-    { src: pgbattle2, alt: "Best Breakers — Juízes avaliando batalhas em Praia Grande" },
+    {
+      src: pgbattle2,
+      alt: "Best Breakers — Juízes avaliando batalhas em Praia Grande",
+    },
     { src: cuiaba4, alt: "Best Breakers — Evento no estádio Arena Pantanal" },
-    { src: cuiaba5, alt: "Best Breakers — Jurados concentrados durante avaliação" },
+    {
+      src: cuiaba5,
+      alt: "Best Breakers — Jurados concentrados durante avaliação",
+    },
     { src: cuiaba6, alt: "Best Breakers — Ambiente do campeonato de breaking" },
     { src: pgbattle1, alt: "Best Breakers — Público acompanhando as batalhas" },
-    { src: cuiaba7, alt: "Best Breakers — Apresentação dos resultados em tempo real" },
+    {
+      src: cuiaba7,
+      alt: "Best Breakers — Apresentação dos resultados em tempo real",
+    },
     { src: cuiaba8, alt: "Best Breakers — Atletas competindo no campeonato" },
     { src: cobexpo3, alt: "Best Breakers — Mesa de jurados na COBEXPO" },
     { src: cuiaba9, alt: "Best Breakers — Visão geral do evento" },
@@ -154,37 +172,31 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
   ];
 
   return (
-    <section
-      id="projetos"
-      className={`py-20 sm:py-28 ${isDarkMode ? "bg-gray-900 bg-opacity-80" : "bg-gray-50"
-        }`}
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        {/* Section Header */}
+    <section id="projetos" className="py-20 sm:py-28">
+      <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-16 max-w-3xl"
         >
           <h2
-            className={`text-3xl sm:text-4xl font-bold mb-4 ${isDarkMode ? "text-red-600" : "text-gray-800"
-              }`}
+            className={`mb-4 text-3xl font-bold tracking-[-0.04em] sm:text-4xl ${
+              isDarkMode ? "text-white" : "text-stone-950"
+            }`}
           >
             {t("projects.title")}
           </h2>
           <p
-            className={`max-w-2xl mx-auto text-base sm:text-lg leading-relaxed ${isDarkMode ? "text-gray-400" : "text-gray-600"
-              }`}
+            className={`max-w-2xl text-base leading-8 sm:text-lg ${
+              isDarkMode ? "text-zinc-400" : "text-stone-600"
+            }`}
           >
             {t("projects.description")}
           </p>
         </motion.div>
 
-        {/* ═══════════════════════════════════════════════════════════════
-            FEATURED PROJECT — Best Breakers
-        ═══════════════════════════════════════════════════════════════ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -192,54 +204,57 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.6 }}
           className="mb-20"
         >
-          {/* Featured Badge */}
           <div className="flex items-center gap-3 mb-5">
             <div
-              className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${isDarkMode
-                  ? "bg-red-600/20 text-red-400 border border-red-600/30"
-                  : "bg-gray-800/10 text-gray-700 border border-gray-800/20"
-                }`}
+              className={`rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.24em] ${
+                isDarkMode
+                  ? "border border-red-600/30 bg-red-600/12 text-red-300"
+                  : "border border-red-200 bg-red-50 text-red-700"
+              }`}
             >
               ★ {t("projects.featured")}
             </div>
           </div>
 
-          {/* Featured Card */}
           <div
-            className={`rounded-2xl overflow-hidden border transition-shadow ${isDarkMode
-                ? "bg-gray-800/80 border-gray-700/50 shadow-2xl shadow-red-900/10"
-                : "bg-white border-gray-200 shadow-xl"
-              }`}
+            className={`overflow-hidden rounded-[2rem] p-1 ${
+              isDarkMode
+                ? "bg-gradient-to-br from-red-500/20 via-white/6 to-white/4"
+                : "bg-gradient-to-br from-red-200 via-white to-stone-200"
+            }`}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              {/* Gallery Side */}
-              <div className="p-4 sm:p-6">
-                <ImageGallery
-                  images={bestBreakersImages}
-                  isDarkMode={isDarkMode}
-                />
-              </div>
-
-              {/* Info Side */}
-              <div className="p-6 sm:p-8 flex flex-col justify-between">
+            <div
+              className={`overflow-hidden rounded-[1.9rem] ${isDarkMode ? "bg-zinc-950/92" : "bg-white/98"}`}
+            >
+              <div className="p-6 sm:p-8">
                 <div>
+                  <p
+                    className={
+                      isDarkMode
+                        ? "text-xs uppercase tracking-[0.3em] text-zinc-500"
+                        : "text-xs uppercase tracking-[0.3em] text-stone-600"
+                    }
+                  >
+                    Best Breakers
+                  </p>
                   <h3
-                    className={`text-2xl sm:text-3xl font-bold mb-4 leading-tight ${isDarkMode ? "text-white" : "text-gray-800"
-                      }`}
+                    className={`mb-4 mt-3 text-2xl font-bold leading-tight sm:text-3xl ${
+                      isDarkMode ? "text-white" : "text-stone-950"
+                    }`}
                   >
                     {featuredProject.title}
                   </h3>
 
                   <p
-                    className={`mb-6 text-sm sm:text-base leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"
-                      }`}
+                    className={`mb-6 text-sm leading-7 sm:text-base ${
+                      isDarkMode ? "text-zinc-300" : "text-stone-700"
+                    }`}
                   >
                     {featuredProject.description}
                   </p>
 
-                  {/* Stats Grid */}
                   {featuredProject.stats && (
-                    <div className="grid grid-cols-2 gap-3 mb-6">
+                    <div className="mb-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
                       {featuredProject.stats.map((stat, i) => (
                         <motion.div
                           key={i}
@@ -247,33 +262,38 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: i * 0.1 }}
-                          className={`flex items-center gap-3 p-3 rounded-xl ${isDarkMode
-                              ? "bg-gray-700/50 border border-gray-600/30"
-                              : "bg-gray-50 border border-gray-100"
-                            }`}
+                          className={`rounded-2xl border p-4 ${
+                            isDarkMode
+                              ? "border-white/8 bg-white/4"
+                              : "border-stone-200 bg-stone-50"
+                          }`}
                         >
-                          <span
-                            className={`flex-shrink-0 ${isDarkMode ? "text-red-500" : "text-gray-700"
+                          <div className="flex items-center gap-3">
+                            <span
+                              className={`flex-shrink-0 ${
+                                isDarkMode ? "text-red-400" : "text-red-700"
                               }`}
-                          >
-                            {stat.icon}
-                          </span>
-                          <span
-                            className={`text-sm font-semibold ${isDarkMode ? "text-white" : "text-gray-800"
+                            >
+                              {stat.icon}
+                            </span>
+                            <span
+                              className={`text-sm font-semibold ${
+                                isDarkMode ? "text-white" : "text-stone-900"
                               }`}
-                          >
-                            {stat.value}
-                          </span>
+                            >
+                              {stat.value}
+                            </span>
+                          </div>
                         </motion.div>
                       ))}
                     </div>
                   )}
 
-                  {/* Technologies */}
                   <div className="mb-6">
                     <h4
-                      className={`text-xs font-semibold uppercase tracking-wider mb-3 ${isDarkMode ? "text-gray-500" : "text-gray-400"
-                        }`}
+                      className={`mb-3 text-xs font-semibold uppercase tracking-[0.28em] ${
+                        isDarkMode ? "text-zinc-500" : "text-stone-600"
+                      }`}
                     >
                       {t("projects.technologies_used")}
                     </h4>
@@ -281,10 +301,11 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                       {featuredProject.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className={`text-xs px-3 py-1.5 rounded-full font-medium transition-colors ${isDarkMode
-                              ? "bg-red-600/10 text-red-300 border border-red-600/20 hover:bg-red-600/20"
-                              : "bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200"
-                            }`}
+                          className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                            isDarkMode
+                              ? "border-red-500/18 bg-red-500/10 text-red-100 hover:bg-red-500/14"
+                              : "border-stone-200 bg-stone-100 text-stone-800 hover:bg-stone-200"
+                          }`}
                         >
                           {tech}
                         </span>
@@ -293,17 +314,13 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                   </div>
                 </div>
 
-                {/* Actions */}
                 <div className="flex flex-wrap gap-3">
                   {featuredProject.liveUrl && (
                     <a
                       href={featuredProject.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all cursor-pointer ${isDarkMode
-                          ? "bg-red-600 text-white hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/20"
-                          : "bg-gray-800 text-white hover:bg-gray-900 hover:shadow-lg"
-                        }`}
+                      className="button-primary inline-flex items-center gap-2 px-5 py-3 text-sm font-medium"
                     >
                       <ExternalLink size={16} />
                       {t("projects.view_project")}
@@ -312,10 +329,11 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                   {featuredProject.liveUrl && (
                     <button
                       onClick={() => openPreview(featuredProject.liveUrl!)}
-                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border transition-all cursor-pointer ${isDarkMode
-                          ? "border-gray-600 text-gray-300 hover:bg-gray-700/50 hover:border-gray-500"
-                          : "border-gray-300 text-gray-600 hover:bg-gray-100 hover:border-gray-400"
-                        }`}
+                      className={`inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-medium transition-all ${
+                        isDarkMode
+                          ? "border-white/12 text-zinc-200 hover:bg-white/6"
+                          : "border-stone-200 text-stone-700 hover:bg-stone-100"
+                      }`}
                     >
                       <Eye size={16} />
                       {t("projects.visualize")}
@@ -323,13 +341,17 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                   )}
                 </div>
               </div>
+
+              <div className="border-t border-black/5 p-4 sm:p-6 dark:border-white/6">
+                <ImageGallery
+                  images={bestBreakersImages}
+                  isDarkMode={isDarkMode}
+                />
+              </div>
             </div>
           </div>
         </motion.div>
 
-        {/* ═══════════════════════════════════════════════════════════════
-            OTHER PROJECTS — Card Grid
-        ═══════════════════════════════════════════════════════════════ */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
@@ -339,106 +361,91 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ y: -6 }}
-              className={`group rounded-2xl overflow-hidden border transition-all cursor-pointer ${isDarkMode
-                  ? "bg-gray-800/70 border-gray-700/50 hover:border-gray-600 hover:shadow-xl hover:shadow-black/20"
-                  : "bg-white border-gray-200 hover:border-gray-300 hover:shadow-xl"
-                }`}
+              className={`group overflow-hidden rounded-[1.75rem] border p-1 transition-all ${
+                isDarkMode
+                  ? "border-white/10 bg-white/4 hover:border-red-500/20"
+                  : "border-stone-200 bg-white hover:border-red-200 hover:shadow-xl"
+              }`}
             >
-              {/* Card Preview Area */}
-              {project.liveUrl && (
-                <div
-                  className={`relative h-44 overflow-hidden ${isDarkMode ? "bg-gray-700/50" : "bg-gray-100"
+              <div
+                className={`h-full rounded-[1.7rem] ${isDarkMode ? "bg-zinc-950/80" : "bg-white"}`}
+              >
+                <div className="p-5 sm:p-6">
+                  <p
+                    className={
+                      isDarkMode
+                        ? "text-xs uppercase tracking-[0.26em] text-zinc-500"
+                        : "text-xs uppercase tracking-[0.26em] text-stone-500"
+                    }
+                  >
+                    Project {index + 1}
+                  </p>
+                  <h3
+                    className={`mb-2 mt-3 text-lg font-bold ${
+                      isDarkMode ? "text-white" : "text-stone-950"
                     }`}
-                  onClick={() => project.liveUrl && openPreview(project.liveUrl)}
-                >
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="flex flex-col items-center gap-2">
-                      <div
-                        className={`p-3 rounded-full transition-all group-hover:scale-110 ${isDarkMode
-                            ? "bg-gray-600/50 text-gray-400 group-hover:bg-red-600/20 group-hover:text-red-400"
-                            : "bg-gray-200 text-gray-500 group-hover:bg-gray-300 group-hover:text-gray-700"
+                  >
+                    {project.title}
+                  </h3>
+                  <p
+                    className={`mb-5 text-sm leading-7 ${
+                      isDarkMode ? "text-zinc-400" : "text-stone-600"
+                    }`}
+                  >
+                    {project.description}
+                  </p>
+
+                  <div className="mb-5">
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className={`rounded-full border px-2.5 py-1 text-xs font-medium ${
+                            isDarkMode
+                              ? "border-white/10 bg-white/5 text-zinc-300"
+                              : "border-stone-200 bg-stone-100 text-stone-700"
                           }`}
-                      >
-                        <Eye size={24} />
-                      </div>
-                      <span
-                        className={`text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity ${isDarkMode ? "text-gray-400" : "text-gray-500"
-                          }`}
-                      >
-                        {t("projects.preview")}
-                      </span>
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                </div>
-              )}
 
-              {/* Card Content */}
-              <div className="p-5 sm:p-6">
-                <h3
-                  className={`text-lg font-bold mb-2 ${isDarkMode ? "text-white" : "text-gray-800"
-                    }`}
-                >
-                  {project.title}
-                </h3>
-                <p
-                  className={`text-sm mb-5 leading-relaxed ${isDarkMode ? "text-gray-400" : "text-gray-600"
-                    }`}
-                >
-                  {project.description}
-                </p>
-
-                <div className="mb-5">
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className={`text-xs px-2.5 py-1 rounded-lg font-medium ${isDarkMode
-                            ? "bg-gray-700/80 text-gray-300 border border-gray-600/30"
-                            : "bg-gray-100 text-gray-600 border border-gray-200"
-                          }`}
+                  <div className="flex flex-wrap gap-2">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="button-primary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium"
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        <ExternalLink size={14} />
+                        {t("projects.view_project")}
+                      </a>
+                    )}
+                    {project.repoUrl && (
+                      <a
+                        href={project.repoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-xs font-medium transition-all ${
+                          isDarkMode
+                            ? "border-white/12 text-zinc-300 hover:bg-white/6"
+                            : "border-stone-200 text-stone-700 hover:bg-stone-100"
+                        }`}
+                      >
+                        <Github size={14} />
+                        {t("projects.source_code")}
+                      </a>
+                    )}
                   </div>
-                </div>
-
-                <div className="flex gap-2">
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-medium transition-all cursor-pointer ${isDarkMode
-                          ? "bg-red-600/80 text-white hover:bg-red-600"
-                          : "bg-gray-700 text-white hover:bg-gray-800"
-                        }`}
-                    >
-                      <ExternalLink size={14} />
-                      {t("projects.view_project")}
-                    </a>
-                  )}
-                  {project.repoUrl && (
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-medium border transition-all cursor-pointer ${isDarkMode
-                          ? "border-gray-600 text-gray-300 hover:bg-gray-700"
-                          : "border-gray-300 text-gray-600 hover:bg-gray-100"
-                        }`}
-                    >
-                      <Github size={14} />
-                      {t("projects.source_code")}
-                    </a>
-                  )}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* GitHub CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -450,10 +457,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
             href="https://github.com/aericki"
             target="_blank"
             rel="noopener noreferrer"
-            className={`group inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-medium transition-all cursor-pointer ${isDarkMode
-                ? "bg-red-600 hover:bg-red-700 text-white hover:shadow-lg hover:shadow-red-600/20"
-                : "bg-gray-800 hover:bg-gray-900 text-white hover:shadow-lg"
-              }`}
+            className="button-primary group inline-flex items-center gap-2 px-7 py-3.5 font-medium"
           >
             <Github size={20} />
             {t("hero.view_more_projects")}
@@ -465,9 +469,6 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
         </motion.div>
       </div>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          PREVIEW MODAL (iframe)
-      ═══════════════════════════════════════════════════════════════ */}
       <AnimatePresence>
         {previewUrl && (
           <motion.div
@@ -483,13 +484,12 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="relative w-full max-w-7xl h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl"
+              className="relative h-[85vh] w-full max-w-7xl overflow-hidden rounded-[2rem] bg-white shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Loading Spinner */}
               <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
                 <div className="flex flex-col items-center gap-3">
-                  <div className="w-10 h-10 border-3 border-gray-200 border-t-red-600 rounded-full animate-spin" />
+                  <div className="h-10 w-10 animate-spin rounded-full border-2 border-gray-200 border-t-red-600" />
                   <span className="text-sm text-gray-500">Carregando...</span>
                 </div>
               </div>
@@ -502,7 +502,6 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
               />
 
-              {/* Close Button */}
               <button
                 onClick={closePreview}
                 className="absolute top-4 right-4 p-2.5 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors z-20 cursor-pointer"
@@ -511,7 +510,6 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
                 <X size={20} />
               </button>
 
-              {/* Open in new tab */}
               <a
                 href={previewUrl}
                 target="_blank"

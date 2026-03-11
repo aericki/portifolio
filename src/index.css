@@ -1,6 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
 @import "tailwindcss";
 
-/* ═══ Skip-to-content (accessibility) ═══ */
+:root {
+  color-scheme: light dark;
+  --bg-base: #09090b;
+  --bg-elevated: rgba(24, 24, 27, 0.78);
+  --bg-soft: rgba(255, 255, 255, 0.04);
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(248, 113, 113, 0.24);
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --accent: #dc2626;
+  --accent-soft: rgba(220, 38, 38, 0.16);
+  --shadow-soft: 0 18px 60px rgba(0, 0, 0, 0.35);
+  --shadow-accent: 0 18px 60px rgba(220, 38, 38, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top, rgba(220, 38, 38, 0.16), transparent 28%),
+    linear-gradient(180deg, #09090b 0%, #09090b 100%);
+  color: var(--text-primary);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  transition:
+    background 220ms ease,
+    color 220ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", "Manrope", sans-serif;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(220, 38, 38, 0.28);
+  color: #fff;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -25,9 +80,144 @@
   white-space: normal;
 }
 
-/* ═══ Animations ═══ */
+.app-shell {
+  position: relative;
+  overflow: clip;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(220, 38, 38, 0.12),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 85% 0%,
+      rgba(255, 255, 255, 0.04),
+      transparent 18%
+    ),
+    linear-gradient(180deg, #09090b 0%, #0c0c10 48%, #09090b 100%);
+}
+
+.app-shell-light {
+  background:
+    radial-gradient(
+      circle at 12% 16%,
+      rgba(220, 38, 38, 0.08),
+      transparent 22%
+    ),
+    radial-gradient(circle at 88% 8%, rgba(244, 63, 94, 0.06), transparent 18%),
+    linear-gradient(180deg, #fffaf9 0%, #ffffff 38%, #f8fafc 100%);
+}
+
+.section-shell {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+
+.glass-nav {
+  background: rgba(9, 9, 11, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(20px);
+}
+
+.glass-panel {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 27, 0.84),
+    rgba(12, 12, 16, 0.72)
+  );
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px);
+}
+
+.glass-panel-light {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(248, 250, 252, 0.96)
+  );
+  border: 1px solid rgba(17, 24, 39, 0.09);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #f87171, #ef4444 52%, #fca5a5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-mesh {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
+}
+
+.hero-mesh-light {
+  background-image:
+    linear-gradient(rgba(17, 24, 39, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.045) 1px, transparent 1px);
+}
+
+.input-shell-light {
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: rgba(248, 250, 252, 0.95);
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+
+.button-primary {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  border: 1px solid rgba(248, 113, 113, 0.28);
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #fff;
+  box-shadow: var(--shadow-accent);
+}
+
+.button-secondary {
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(82, 82, 82, 0.681);
+  color: #ffffff;
+  backdrop-filter: blur(16px);
+}
+
+.input-shell {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.input-shell:focus-within {
+  border-color: rgba(248, 113, 113, 0.48);
+  box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+}
+
+.ambient-float {
+  animation: ambientFloat 9s ease-in-out infinite;
+}
+
 .animate-fade-in {
-  animation: fadeIn 1.5s ease-in;
+  animation: fadeIn 1.2s ease-in;
 }
 
 .animate-bounce-slow {
@@ -35,16 +225,51 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounceSlow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-/* ═══ Print styles (para recrutadores) ═══ */
+@keyframes ambientFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -10px, 0) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .ambient-float,
+  .animate-fade-in,
+  .animate-bounce-slow {
+    animation: none !important;
+  }
+}
+
 @media print {
   header,
   footer,
@@ -73,11 +298,15 @@
     color: #666;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     color: #111 !important;
   }
 
-  p, li, span {
+  p,
+  li,
+  span {
     color: #333 !important;
   }
 }
